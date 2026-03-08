@@ -1,0 +1,21 @@
+{
+  "name": "ai-friend-ar-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AR frontend for the AI Friend project — Three.js + WebXR",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.43.0",
+    "three": "^0.163.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.163.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.4.19"
+  }
+}
