@@ -31,15 +31,30 @@ class _DevResponse:
     user = _DevUser()
 
 
+def _dev_auth_enabled() -> bool:
+    settings = get_settings()
+    if settings.dev_mode:
+        return True
+
+    # Fall back to dev auth when Supabase is not configured.
+    return not all(
+        [
+            settings.supabase_url.strip(),
+            settings.supabase_anon_key.strip(),
+            settings.supabase_service_role_key.strip(),
+        ]
+    )
+
+
 def sign_up(email: str, password: str) -> object:
-    if get_settings().dev_mode:
+    if _dev_auth_enabled():
         return _DevResponse()
     client = get_supabase_client()
     return client.auth.sign_up({"email": email, "password": password})
 
 
 def sign_in(email: str, password: str) -> object:
-    if get_settings().dev_mode:
+    if _dev_auth_enabled():
         return _DevResponse()
     client = get_supabase_client()
     return client.auth.sign_in_with_password({"email": email, "password": password})
@@ -47,7 +62,7 @@ def sign_in(email: str, password: str) -> object:
 
 def get_user_from_token(access_token: str) -> object | None:
     """Validate a JWT and return the user payload, or None if invalid."""
-    if get_settings().dev_mode:
+    if _dev_auth_enabled():
         return _DevUser()
     client = get_supabase_admin_client()
     try:

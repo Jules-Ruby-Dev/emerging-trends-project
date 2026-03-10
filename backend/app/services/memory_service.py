@@ -22,7 +22,10 @@ def _collection_name(user_id: str) -> str:
 
 def store_memory(user_id: str, content: str, metadata: Optional[dict] = None) -> None:
     """Persist a message/fact into the user's memory collection."""
-    client = get_chroma_client()
+    try:
+        client = get_chroma_client()
+    except RuntimeError:
+        return
     collection = client.get_or_create_collection(name=_collection_name(user_id))
     collection.add(
         documents=[content],
@@ -33,7 +36,10 @@ def store_memory(user_id: str, content: str, metadata: Optional[dict] = None) ->
 
 def retrieve_memories(user_id: str, query: str, n_results: int = MAX_RESULTS) -> list[str]:
     """Return the most semantically relevant past memories for a given query."""
-    client = get_chroma_client()
+    try:
+        client = get_chroma_client()
+    except RuntimeError:
+        return []
     collection = client.get_or_create_collection(name=_collection_name(user_id))
 
     count = collection.count()
@@ -49,7 +55,10 @@ def retrieve_memories(user_id: str, query: str, n_results: int = MAX_RESULTS) ->
 
 def delete_memories(user_id: str) -> None:
     """Remove all memories for a user (e.g. on account deletion)."""
-    client = get_chroma_client()
+    try:
+        client = get_chroma_client()
+    except RuntimeError:
+        return
     try:
         client.delete_collection(name=_collection_name(user_id))
     except Exception:
