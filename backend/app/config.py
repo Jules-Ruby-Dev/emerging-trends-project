@@ -1,15 +1,17 @@
 """Application configuration loaded from environment variables."""
 
-from pydantic_settings import BaseSettings, SettingsConfigDict
+import os
 from functools import lru_cache
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    # OpenAI
-    openai_api_key: str = ""
-    openai_model: str = "gpt-4o-mini"
+    # Ollama
+    ollama_base_url: str = ""
+    ollama_model: str = "llama3.2"
 
     # Supabase
     supabase_url: str = ""
@@ -25,6 +27,16 @@ class Settings(BaseSettings):
     # App
     app_env: str = "development"
     cors_origins: str = "http://localhost:5173,http://localhost:3000"
+
+    @property
+    def resolved_ollama_base_url(self) -> str:
+        if self.ollama_base_url:
+            return self.ollama_base_url.rstrip("/")
+
+        if os.path.exists("/.dockerenv"):
+            return "http://host.docker.internal:11434"
+
+        return "http://localhost:11434"
 
     @property
     def cors_origins_list(self) -> list[str]:

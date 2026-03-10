@@ -30,5 +30,12 @@ async def chat(
     user_id: str = Depends(get_current_user_id),
 ) -> ChatResponse:
     session_id = body.session_id or str(uuid.uuid4())
-    reply = await get_ai_reply(user_id=user_id, user_message=body.message)
+    try:
+        reply = await get_ai_reply(user_id=user_id, user_message=body.message)
+    except RuntimeError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=str(exc),
+        ) from exc
+
     return ChatResponse(reply=reply, session_id=session_id)

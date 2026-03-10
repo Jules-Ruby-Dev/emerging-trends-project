@@ -1,15 +1,22 @@
 """ChromaDB client initialisation."""
 
 from functools import lru_cache
-import chromadb
-from chromadb.config import Settings as ChromaSettings
+from typing import Any
 
 from app.config import get_settings
 
 
 @lru_cache
-def get_chroma_client() -> chromadb.ClientAPI:
+def get_chroma_client() -> Any:
     settings = get_settings()
+
+    try:
+        import chromadb
+        from chromadb.config import Settings as ChromaSettings
+    except ImportError as exc:
+        raise RuntimeError(
+            "ChromaDB is not installed. Install backend requirements before using memory features."
+        ) from exc
 
     if settings.chroma_mode == "remote":
         client = chromadb.HttpClient(

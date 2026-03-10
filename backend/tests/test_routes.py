@@ -1,10 +1,9 @@
 """Unit / integration tests for the FastAPI routes.
 
-External dependencies (Supabase, OpenAI, ChromaDB) are mocked so the tests
+External dependencies (Supabase, Ollama, ChromaDB) are mocked so the tests
 run offline without real credentials.
 """
 
-import pytest
 from unittest.mock import AsyncMock, MagicMock, patch
 from fastapi.testclient import TestClient
 
@@ -64,6 +63,7 @@ def test_signin_success(mock_sign_in):
     assert response.status_code == 200
     data = response.json()
     assert data["access_token"] == "mock-token"
+    mock_sign_in.assert_called_once_with("test@example.com", "securepassword")
 
 
 @patch("app.routes.auth.sign_in")
@@ -99,8 +99,25 @@ def test_chat_success(mock_reply, mock_get_user):
     assert "session_id" in data
 
 
+@patch("app.routes.chat.get_user_from_token")
+@patch("app.routes.chat.get_ai_reply", new_callable=AsyncMock)
+def test_chat_ollama_unavailable(mock_reply, mock_get_user):
+    mock_user = MagicMock()
+    mock_user.id = "user-abc"
+    mock_get_user.return_value = mock_user
+    mock_reply.side_effect = RuntimeError("Unable to reach Ollama at http://localhost:11434.")
+
+    response = client.post(
+        "/chat",
+        json={"message": "Hello Aria!"},
+        headers={"Authorization": "Bearer valid-token"},
+    )
+    assert response.status_code == 503
+    assert response.json()["detail"] == "Unable to reach Ollama at http://localhost:11434."
+
+
 @patch("app.routes.chat.get_user_from_token", return_value=None)
-def test_chat_unauthorized(mock_get_user):
+def test_chat_unauthorized(_mock_get_user):
     response = client.post(
         "/chat",
         json={"message": "Hello!"},

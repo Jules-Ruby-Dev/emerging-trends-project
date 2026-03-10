@@ -1,10 +1,10 @@
-"""AI service — wraps the OpenAI Chat Completions API.
+"""AI service — wraps the Ollama chat API.
 
 The AI friend has a fixed system persona and is augmented with relevant
 long-term memories fetched from ChromaDB before each response.
 """
 
-from openai import AsyncOpenAI
+import httpx
 
 from app.config import get_settings
 from app.services.memory_service import retrieve_memories, store_memory
@@ -19,7 +19,6 @@ Keep responses concise (2-4 sentences) unless the user asks for more detail."""
 async def get_ai_reply(user_id: str, user_message: str) -> str:
     """Generate an AI friend reply, enriched with long-term memory."""
     settings = get_settings()
-    client = AsyncOpenAI(api_key=settings.openai_api_key)
 
     # Retrieve relevant past memories to ground the response
     memories = retrieve_memories(user_id, user_message)
@@ -34,14 +33,28 @@ async def get_ai_reply(user_id: str, user_message: str) -> str:
         {"role": "user", "content": user_message},
     ]
 
-    response = await client.chat.completions.create(
-        model=settings.openai_model,
-        messages=messages,
-        max_tokens=256,
-        temperature=0.8,
-    )
+    try:
+        async with httpx.AsyncClient(timeout=60.0) as client:
+            response = await client.post(
+                f"{settings.resolved_ollama_base_url}/api/chat",
+                json={
+                    "model": settings.ollama_model,
+                    "messages": messages,
+                    "stream": False,
+                    "options": {"temperature": 0.8},
+                },
+            )
+            response.raise_for_status()
+    except httpx.HTTPError as exc:
+        raise RuntimeError(
+            f"Unable to reach Ollama at {settings.resolved_ollama_base_url}. "
+            "Make sure Ollama is running and the model is available."
+        ) from exc
 
-    reply = response.choices[0].message.content or ""
+    data = response.json()
+    reply = (data.get("message") or {}).get("content", "").strip()
+    if not reply:
+        raise RuntimeError("Ollama returned an empty response.")
 
     # Persist both sides of the exchange as memory
     store_memory(user_id, f"User said: {user_message}")
