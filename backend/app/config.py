@@ -26,6 +26,7 @@ class Settings(BaseSettings):
 
     # App
     app_env: str = "development"
+    dev_mode: bool = False  # Skip Supabase auth — for local dev without credentials
     cors_origins: str = "http://localhost:5173,http://localhost:3000"
 
     @property

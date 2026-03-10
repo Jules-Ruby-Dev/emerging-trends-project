@@ -57,58 +57,96 @@ emerging-trends-project/
 - Node 20+
 - Docker & Docker Compose (optional)
 - [Ollama](https://ollama.com) installed locally
-- A local Ollama model pulled, for example `ollama pull llama3.2`
-- A [Supabase](https://supabase.com) project
+- A [Supabase](https://supabase.com) project (optional — see Dev mode below)
 
-### 1. Clone & configure
+---
+
+### 1. Configure environment files
 
 ```bash
 # Backend
 cp backend/.env.example backend/.env
-# Edit backend/.env with your Ollama and Supabase settings
 
 # Frontend
 cp frontend/.env.example frontend/.env
-# Edit frontend/.env with your Supabase URL/anon key
 ```
 
-### 2a. Run with Docker Compose
+Key settings in `backend/.env`:
 
-```bash
-docker compose up --build
-```
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `OLLAMA_BASE_URL` | _(auto)_ | Leave blank — defaults to `http://localhost:11434` locally or `http://host.docker.internal:11434` in Docker |
+| `OLLAMA_MODEL` | `llama3.2` | Any model you have pulled in Ollama |
+| `DEV_MODE` | `true` | Set to `true` to skip Supabase auth (any token accepted). Set to `false` when you have Supabase configured. |
+| `SUPABASE_URL` | _(empty)_ | Only needed when `DEV_MODE=false` |
+| `SUPABASE_ANON_KEY` | _(empty)_ | Only needed when `DEV_MODE=false` |
+| `SUPABASE_SERVICE_ROLE_KEY` | _(empty)_ | Only needed when `DEV_MODE=false` |
 
-If Ollama is running on your host machine, the backend container will use `http://host.docker.internal:11434` automatically unless you override `OLLAMA_BASE_URL`.
+---
 
-- Backend: http://localhost:8000  
-- Frontend: http://localhost:5173  
-- API docs: http://localhost:8000/docs
+### 2. Pull the Ollama model
 
-### 2b. Run locally (without Docker)
+Install Ollama from https://ollama.com/download, then in **PowerShell** or **Command Prompt**:
 
-**Backend**
-```bash
+```powershell
 ollama pull llama3.2
-
-cd backend
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload
 ```
 
-**Frontend**
+Ollama runs as a background service automatically after install. If you ever see a "port already in use" error when trying to start it, it is already running — no action needed.
+
+---
+
+### 3a. Run locally (recommended for development)
+
+**Backend** — from the repo root:
+
+```bash
+./start-backend.sh
+```
+
+Or manually on Windows (PowerShell / CMD):
+
+```powershell
+cd backend
+..\.venv\Scripts\python.exe -m uvicorn app.main:app --reload
+```
+
+- API: http://localhost:8000
+- Interactive docs: http://localhost:8000/docs
+
+**Frontend** — in a second terminal:
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-### 3. Run backend tests
+- App: http://localhost:5173
+
+> **Tip — testing chat without Supabase:** With `DEV_MODE=true` in `backend/.env`, the `/auth/signin` endpoint returns a fake token. Use that token as the `Authorization: Bearer <token>` header when calling `/chat`, or test directly in the Swagger UI at `/docs`.
+
+---
+
+### 3b. Run with Docker Compose
 
 ```bash
-cd backend
-pip install -r requirements.txt
-pytest tests/ -v
+docker compose up --build
+```
+
+Ollama must be running on the host machine. The backend container will reach it at `http://host.docker.internal:11434` automatically.
+
+- Backend: http://localhost:8000
+- Frontend: http://localhost:5173
+- API docs: http://localhost:8000/docs
+
+---
+
+### 4. Run backend tests
+
+```bash
+./start-backend.sh --help > /dev/null  # ensure venv exists first
+../.venv/Scripts/python.exe -m pytest backend/tests -v
 ```
 
 ---
