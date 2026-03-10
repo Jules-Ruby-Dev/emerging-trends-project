@@ -128,6 +128,98 @@ npm run dev
 
 ---
 
+## Testing AR on your phone
+
+Use this checklist to test the WebXR AR flow on a real device.
+
+> Start this section after completing **3a. Run locally** above.
+
+### Prerequisites
+- Android phone with Chrome (WebXR AR support is strongest here)
+- Phone and computer on the same Wi-Fi network
+- Backend running locally (`./start-backend.sh`)
+
+### 1. Start frontend for LAN access
+
+From `frontend/`, run:
+
+```bash
+npm run dev -- --host 0.0.0.0 --port 5173
+```
+
+Then open on your phone:
+
+```text
+http://<YOUR_COMPUTER_LAN_IP>:5173
+```
+
+How to find your LAN IP:
+- Windows (PowerShell): run `ipconfig` and look for `IPv4 Address` under your active Wi-Fi adapter
+- macOS: run `ipconfig getifaddr en0` (or check System Settings → Network → Wi-Fi)
+- Linux: run `hostname -I` and use the local network IP (often starts with `192.168.x.x` or `10.x.x.x`)
+
+### 2. Use HTTPS if AR session does not start
+
+Many mobile browsers require a secure context for immersive WebXR AR.
+If AR does not start on LAN HTTP, expose your local frontend with a tunnel:
+
+```bash
+npx localtunnel --port 5173
+```
+
+Open the generated `https://...` URL on your phone.
+
+### 3. Allow required permissions
+- Camera permission must be allowed in Chrome
+- If prompted, allow motion/sensor access
+
+### 4. Quick troubleshooting
+- Verify backend health at `http://localhost:8000/health` on your computer
+- Keep frontend and backend running in separate terminals while testing
+- If chat fails on phone, do not switch between `localhost`, LAN IP, and tunnel URL in the same session
+- If AR still fails, update Chrome and confirm ARCore support on the device
+
+### 5. Common errors and fixes
+
+| Symptom | Likely cause | Fix |
+|--------|---------------|-----|
+| Page loads on laptop, but not on phone | Vite dev server not exposed on LAN | Start frontend with `npm run dev -- --host 0.0.0.0 --port 5173` |
+| "Sorry, I couldn't connect right now" in chat | Backend not running or URL/origin mismatch during session | Ensure `./start-backend.sh` is running and keep using one origin (LAN IP or tunnel) |
+| AR button appears but AR session does not start | Browser/device requires secure context for WebXR AR | Use tunnel HTTPS URL from `npx localtunnel --port 5173` |
+| Camera does not open | Camera permission blocked | Re-enable site camera permission in Chrome settings and reload |
+| Black screen or no AR placement | Device/browser capability issue | Update Chrome, confirm ARCore support, test on another Android phone |
+
+### 6. Copy-paste command runbook
+
+Run these in order using separate terminals from the project root.
+
+**Terminal 1 — backend**
+
+```bash
+./start-backend.sh
+```
+
+**Terminal 2 — frontend on LAN**
+
+```bash
+cd frontend
+npm install
+npm run dev -- --host 0.0.0.0 --port 5173
+```
+
+**Terminal 3 — optional HTTPS tunnel for mobile WebXR**
+
+```bash
+cd frontend
+npx localtunnel --port 5173
+```
+
+Then on your phone:
+- Start with `http://<YOUR_COMPUTER_LAN_IP>:5173`
+- If AR does not start, use the `https://...` URL printed by LocalTunnel
+
+---
+
 ### 3b. Run with Docker Compose
 
 ```bash
