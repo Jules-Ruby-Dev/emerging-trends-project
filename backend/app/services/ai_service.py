@@ -10,14 +10,25 @@ from app.config import get_settings
 from app.services.memory_service import retrieve_memories, store_memory
 from app.prompts import get_system_prompt, format_memory_context
 
+# Chris Part
+# async def get_ai_reply(
+#     user_id: str,
+#     user_message: str,
+#     personality_id: str | None = None
+# ) -> str:
+# from app.services.personality_service import get_personality
 
-async def get_ai_reply(
-    user_id: str,
-    user_message: str,
-    personality_id: str | None = None
-) -> str:
+
+def _build_system_prompt(personality_id: str | None) -> tuple[str, str]:
+    personality = get_personality(personality_id)
+    prompt = personality["system_prompt"]
+    return prompt, personality["id"]
+
+
+async def get_ai_reply(user_id: str, user_message: str, personality_id: str | None = None) -> tuple[str, str]:
     """Generate an AI friend reply, enriched with long-term memory."""
     settings = get_settings()
+    system_prompt, resolved_personality_id = _build_system_prompt(personality_id)
 
     # Get system prompt for the personality
     system_prompt = get_system_prompt(personality_id)
@@ -56,6 +67,6 @@ async def get_ai_reply(
 
     # Persist both sides of the exchange as memory
     store_memory(user_id, f"User said: {user_message}")
-    store_memory(user_id, f"Aria replied: {reply}")
+    store_memory(user_id, f"{resolved_personality_id} replied: {reply}")
 
-    return reply
+    return reply, resolved_personality_id

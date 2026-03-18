@@ -86,7 +86,7 @@ def test_chat_success(mock_reply, mock_get_user):
     mock_user = MagicMock()
     mock_user.id = "user-abc"
     mock_get_user.return_value = mock_user
-    mock_reply.return_value = "Hey there! How are you doing today?"
+    mock_reply.return_value = ("Hey there! How are you doing today?", "aria")
 
     response = client.post(
         "/chat",
@@ -96,6 +96,7 @@ def test_chat_success(mock_reply, mock_get_user):
     assert response.status_code == 200
     data = response.json()
     assert data["reply"] == "Hey there! How are you doing today?"
+    assert data["personality_id"] == "aria"
     assert "session_id" in data
 
 
@@ -114,6 +115,55 @@ def test_chat_ollama_unavailable(mock_reply, mock_get_user):
     )
     assert response.status_code == 503
     assert response.json()["detail"] == "Unable to reach Ollama at http://localhost:11434."
+
+
+@patch("app.routes.personalities.list_personalities")
+def test_list_personalities(mock_list):
+    mock_list.return_value = [
+        {
+            "id": "aria",
+            "name": "Aria",
+            "description": "Warm and empathetic AI friend.",
+            "system_prompt": "You are Aria",
+        }
+    ]
+
+    response = client.get("/personalities")
+    assert response.status_code == 200
+    assert response.json() == [
+        {
+            "id": "aria",
+            "name": "Aria",
+            "description": "Warm and empathetic AI friend.",
+        }
+    ]
+
+
+@patch("app.routes.personalities.get_personality")
+def test_get_personality_found(mock_get_personality):
+    mock_get_personality.return_value = {
+        "id": "coach",
+        "name": "Coach",
+        "description": "Motivational and action-oriented accountability partner.",
+        "system_prompt": "You are Coach",
+    }
+
+    response = client.get("/personalities/coach")
+    assert response.status_code == 200
+    assert response.json()["id"] == "coach"
+
+
+@patch("app.routes.personalities.get_personality")
+def test_get_personality_not_found(mock_get_personality):
+    mock_get_personality.return_value = {
+        "id": "aria",
+        "name": "Aria",
+        "description": "Warm and empathetic AI friend.",
+        "system_prompt": "You are Aria",
+    }
+
+    response = client.get("/personalities/unknown")
+    assert response.status_code == 404
 
 
 @patch("app.routes.chat.get_user_from_token", return_value=None)

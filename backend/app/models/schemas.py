@@ -20,6 +20,13 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     reply: str
     session_id: str
+    personality_id: str
+
+
+class PersonalityResponse(BaseModel):
+    id: str
+    name: str
+    description: str
 
 
 # ── Auth ──────────────────────────────────────────────────────────────────────

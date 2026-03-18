@@ -1,6 +1,6 @@
 /** REST API helpers for communicating with the FastAPI backend. */
 
-import type { ChatResponse } from "./types";
+import type { ChatResponse, Personality } from "./types";
 
 // Use localhost:8000 for the backend API
 const API_BASE = "http://localhost:8000";
@@ -32,8 +32,21 @@ export async function sendMessage(
   sessionId?: string,
   personalityId?: string,
 ): Promise<ChatResponse> {
-  const url = `${API_BASE}/chat`;
-  const payload: any = { message, session_id: sessionId };
+  // Chris Part
+  // const url = `${API_BASE}/chat`;
+  // const payload: any = { message, session_id: sessionId };
+  const res = await fetch(`${API_BASE}/chat`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${accessToken}`,
+    },
+    body: JSON.stringify({
+      message,
+      session_id: sessionId,
+      personality_id: personalityId,
+    }),
+  });
 
   // Add personality if provided
   if (personalityId) {
@@ -152,4 +165,17 @@ export async function deleteSession(
     console.error("deleteSession: error", error);
     throw error;
   }
+}
+
+export async function getPersonalities(): Promise<Personality[]> {
+  const res = await fetch(`${API_BASE}/personalities`, {
+    method: "GET",
+  });
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: "Unknown error" }));
+    throw new Error((err as { detail: string }).detail ?? "Unable to load personalities.");
+  }
+
+  return res.json() as Promise<Personality[]>;
 }
