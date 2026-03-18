@@ -42,6 +42,7 @@ export class ARScene {
 
     // Avatar group
     this.avatar = this._buildAvatar();
+    this.avatar.scale.setScalar(1.6);
     this.avatar.position.set(0, 0, -1.5);
     this.scene.add(this.avatar);
 
