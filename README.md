@@ -98,6 +98,20 @@ Ollama runs as a background service automatically after install. If you ever see
 
 ### 3a. Run locally (recommended for development)
 
+**Single command (backend + frontend)** — from the repo root:
+
+```bash
+./start-dev.sh
+```
+
+- Backend: http://localhost:8000
+- Frontend: http://localhost:5173
+- Stop both with `Ctrl+C`
+
+If frontend dependencies are not installed yet, this script will run `npm ci` automatically.
+
+---
+
 **Backend** — from the repo root:
 
 ```bash
