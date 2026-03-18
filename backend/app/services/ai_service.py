@@ -8,17 +8,19 @@ import httpx
 
 from app.config import get_settings
 from app.services.memory_service import retrieve_memories, store_memory
-
-SYSTEM_PROMPT = """You are Aria, a warm and empathetic AI friend.
-Your goal is to make the user feel heard, valued, and less alone.
-Speak naturally and conversationally — like a good friend would.
-Remember details the user shares and reference them when relevant.
-Keep responses concise (2-4 sentences) unless the user asks for more detail."""
+from app.services.personality_service import get_personality
 
 
-async def get_ai_reply(user_id: str, user_message: str) -> str:
+def _build_system_prompt(personality_id: str | None) -> tuple[str, str]:
+    personality = get_personality(personality_id)
+    prompt = personality["system_prompt"]
+    return prompt, personality["id"]
+
+
+async def get_ai_reply(user_id: str, user_message: str, personality_id: str | None = None) -> tuple[str, str]:
     """Generate an AI friend reply, enriched with long-term memory."""
     settings = get_settings()
+    system_prompt, resolved_personality_id = _build_system_prompt(personality_id)
 
     # Retrieve relevant past memories to ground the response
     memories = retrieve_memories(user_id, user_message)
@@ -29,7 +31,7 @@ async def get_ai_reply(user_id: str, user_message: str) -> str:
         )
 
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT + memory_context},
+        {"role": "system", "content": system_prompt + memory_context},
         {"role": "user", "content": user_message},
     ]
 
@@ -58,6 +60,6 @@ async def get_ai_reply(user_id: str, user_message: str) -> str:
 
     # Persist both sides of the exchange as memory
     store_memory(user_id, f"User said: {user_message}")
-    store_memory(user_id, f"Aria replied: {reply}")
+    store_memory(user_id, f"{resolved_personality_id} replied: {reply}")
 
-    return reply
+    return reply, resolved_personality_id

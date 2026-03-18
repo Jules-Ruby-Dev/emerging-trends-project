@@ -14,11 +14,19 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     message: str = Field(..., min_length=1, max_length=2000)
     session_id: Optional[str] = None
+    personality_id: Optional[str] = None
 
 
 class ChatResponse(BaseModel):
     reply: str
     session_id: str
+    personality_id: str
+
+
+class PersonalityResponse(BaseModel):
+    id: str
+    name: str
+    description: str
 
 
 # ── Auth ──────────────────────────────────────────────────────────────────────

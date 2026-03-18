@@ -35,9 +35,27 @@
 
       .msg { padding: 0.4rem 0.75rem; border-radius: 1rem; max-width: 80%; font-size: 0.9rem; }
       .msg.user { align-self: flex-end; background: #3b82f6; }
-      .msg.aria  { align-self: flex-start; background: #374151; }
+      .msg.assistant  { align-self: flex-start; background: #374151; }
 
       #input-row { display: flex; gap: 0.5rem; }
+      #personality-select {
+        padding: 0.6rem 0.8rem;
+        border-radius: 0.8rem;
+        border: none;
+        background: rgba(255,255,255,0.2);
+        color: #fff;
+        font-size: 0.9rem;
+        min-width: 9rem;
+      }
+      #personality-select option {
+        color: #111;
+      }
+      #personality-description {
+        color: rgba(255,255,255,0.78);
+        font-size: 0.8rem;
+        line-height: 1.2;
+        margin-top: -0.15rem;
+      }
       #message-input {
         flex: 1; padding: 0.6rem 1rem; border-radius: 2rem;
         border: none; background: rgba(255,255,255,0.15);
@@ -84,10 +102,12 @@
       <div id="ui-overlay">
         <div id="chat-messages"></div>
         <div id="input-row">
+          <select id="personality-select" aria-label="AI personality"></select>
           <input id="message-input" type="text" placeholder="Say something to Aria…" autocomplete="off" />
           <button id="send-btn">Send</button>
           <button id="ar-btn">Start AR</button>
         </div>
+        <div id="personality-description" aria-live="polite"></div>
       </div>
 
       <!-- Auth overlay (shown when not logged in) -->

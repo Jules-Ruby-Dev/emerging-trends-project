@@ -1,13 +1,20 @@
 /** Shared TypeScript types used across the frontend. */
 
 export interface ChatMessage {
-  role: "user" | "aria";
+  role: "user" | "assistant";
   content: string;
 }
 
 export interface ChatResponse {
   reply: string;
   session_id: string;
+  personality_id: string;
+}
+
+export interface Personality {
+  id: string;
+  name: string;
+  description: string;
 }
 
 export interface AuthResponse {
