@@ -1,0 +1,2627 @@
+{
+  "colors": {
+    "50": "#000000",
+    "100": "#0f172a",
+    "home---iphone-16": "#061d30",
+    "ai-chat-box": "#ffedcf",
+    "what-would-you-like-to-know": "#64748b",
+    "image": "#ffffff",
+    "code": "#ffffff",
+    "mic": "#ffffff",
+    "icon-button": "#00b6c9",
+    "arrow-up": "#ffffff",
+    "rectangle-2": "#0f172a",
+    "menu-list": "#ffffff",
+    "lisearch": "#ffffff",
+    "vector-stroke": "#676d75",
+    "liclock": "#ffffff",
+    "history": "#676d75",
+    "container": "#00b6c9",
+    "lihome": "#ffffff",
+    "iconmessage-square": "#ffffff",
+    "iconsettings": "#ffffff",
+    "my-settings": "#ffa829",
+    "iphone-indicator": "#061d30",
+    "line": "#b9c0c9",
+    "ellipse-1": "#e2e8f0",
+    "navigation-menu-content-item": "#ffffff",
+    "introduction": "#000000",
+    "re-usable-components-built-using-radix-ui-and-tailwind-css": "#64748b",
+    "frame-4": "#020202",
+    "this-will-be-the-ai-frame-the-girl-will-be-replaced-with-actual-3d-ai": "#ffffff",
+    "mental-health": "#061d30",
+    "rectangle-5": "#061d30",
+    "just-checking-in-": "#ffffff",
+    "some-of-what-you-said-sounds-really-heavy-if-youre-in-distress-reaching-out-to-someone-can-really-help": "#ffffff",
+    "if-you-need-immediate-support-call-or-text-988-suicide-crisis-helpline--canada-visit-https988ca": "#ffdca1",
+    "history---iphone-16": "#061d30",
+    "older-messages-will-be-deleted": "#94a3b8",
+    "settings---iphone-16": "#061d30",
+    "field": "#ffffff",
+    "choose-ai-personality": "#0f172a",
+    "pretend-friend": "#ffffff",
+    "accounts": "#ffffff",
+    "logout": "#0f172a",
+    "delete-account": "#ffffff",
+    "settings---iphone-17": "#061d30",
+    "settings--pretend-friend": "#ffffff",
+    "title-section": "#ffffff",
+    "menu-item": "#334155",
+    "": "#b9c1ca",
+    "iconmail": "#ffffff",
+    "b": "#64748b",
+    "secondary-icon": "#ffffff",
+    "top-section": "#ffffff",
+    "iconcheck": "#ffffff",
+    "section-1": "#ffffff",
+    "section-items": "#ffffff",
+    "bottom-section": "#ffffff",
+    "label": "#000000",
+    "textarea": "#ffffff",
+    "type-your-message-here": "#94a3b8",
+    "helper-text": "#64748b",
+    "button": "#0f172a",
+    "continue": "#ffffff",
+    "login---iphone-16": "#061d30",
+    "description": "#757575",
+    "input": "#0f172a",
+    "value": "#b3b3b3",
+    "error": "#1e1e1e",
+    "star": "#ffffff",
+    "x": "#ffffff",
+    "signup-here": "#8de0ee",
+    "text-link": "#ffffff",
+    "colors": "#0f172a",
+    "vector": "#ffedcf",
+    "auth---login-login-register-terms-and-conditions-page-not-now-pls-do-not-goon-or-do-3-settings-page-choosing-ai-personality-choosing-ai-avatar---1-woman-for-now-choose-a-voice-in-the-future-logout-delete-account-chatbot-page-chatting-part": "#000000",
+    "rectangle-1": "#ffffff",
+    "shadcn-design-system-in-figma-httpswwwfigmacomcommunityfile1203061493325953101shadcn-ui-design-system-mobile-ux-httpswwwfigmacomcommunityfile1233339730891059165": "#000000",
+    "home": "#00b6c9",
+    "search": "#ffffff",
+    "vuesaxboldscan": "#ffffff",
+    "liuser": "#ffffff",
+    "profile": "#676d75",
+    "choosing-ai-personality-choosing-ai-avatar---1-woman-for-now-choose-a-voice-in-the-future-logout-delete-account": "#000000",
+    "macbook-pro-16---1": "#ffffff",
+    "rectangle-4": "#8de0ee",
+    "dreamy-and-cozy": "#ffffff",
+    "thought--bubbles--thought-bubble": "#ffffff",
+    "avatar-by-rachel": "#ffffff",
+    "a-friend-to-build-up-social-skills-and-enjoy-with-in-a-world-where-we-are-more-separated-than-ever": "#ffffff",
+    "inter": "#ffffff",
+    "licensed-font-logo": "#ffffff",
+    "mobile-app-font": "#ffffff",
+    "cozy-and-soft-contrasts-cools-warms-neutrals": "#ffffff",
+    "layer1": "#ffffff",
+    "ellipse-2": "#ffffff",
+    "ellipse-4": "#ffffff",
+    "ellipse-3": "#ffffff",
+    "ellipse-5": "#000000",
+    "ellipse-7": "#8de0ee",
+    "ellipse-8": "#8de0ee",
+    "references-shadcn-design-system-in-figma-httpswwwfigmacomcommunityfile1203061493325953101shadcn-ui-design-system-mobile-ux--httpswwwfigmacomcommunityfile1233339730891059165": "#000000",
+    "cover": "#ffffff",
+    "ellipse-6": "#0f172a",
+    "shadcnui": "#ffffff",
+    "beautifully-designed-components-built-with-radixui-and-tailwind-css": "#0f172a",
+    "default": "#000000",
+    "popover": "#ffffff",
+    "dimensions": "#000000",
+    "set-the-dimensions-for-the-layer": "#94a3b8",
+    "width": "#000000",
+    "hover-card": "#ffffff",
+    "nextjs": "#0f172a",
+    "the-react-framework---created-and-maintained-by-vercel": "#0f172a",
+    "calendar": "#ffffff",
+    "joined-december-2021": "#64748b",
+    "tabs": "#f1f5f9",
+    "tab-item": "#ffffff",
+    "selected": "#0f172a",
+    "unselected": "#334155",
+    "frame-3": "#ffffff",
+    "section-title": "#334155",
+    "section": "#ffffff",
+    "iconuser": "#ffffff",
+    "iconcredit-card": "#ffffff",
+    "iconkeyboard": "#ffffff",
+    "iconusers": "#ffffff",
+    "iconplus": "#ffffff",
+    "iconcloud": "#ffffff",
+    "frame-2": "#ffffff",
+    "iconlog-out": "#ffffff",
+    "this-figma-file-was-made-with-love-by-skirano": "#94a3b8",
+    "tooltip": "#ffffff",
+    "add-to-library": "#000000",
+    "accept-terms-and-condition": "#000000",
+    "separator": "#0f172a",
+    "visually-or-semantically-separates-content": "#475569",
+    "radix-primitives": "#000000",
+    "an-open-source-ui-component-library": "#334155",
+    "blog": "#000000",
+    "docs": "#000000",
+    "source": "#000000",
+    "slider": "#0f172a",
+    "an-input-where-the-user-selects-a-value-from-within-a-given-range": "#475569",
+    "area": "#f1f5f9",
+    "progress": "#0f172a",
+    "indicator": "#ffffff",
+    "switch": "#0f172a",
+    "a-control-that-allows-the-user-to-toggle-between-checked-and-not-checked": "#475569",
+    "a-set-of-layered-sections-of-contentknown-as-tab-panelsthat-are-displayed-one-at-a-time": "#475569",
+    "tab-card": "#ffffff",
+    "make-changes-to-your-account-here-click-save-when-youre-done": "#64748b",
+    "email": "#0f172a",
+    "pietroschiranogmailcom": "#0f172a",
+    "enter-your-email-address": "#64748b",
+    "text-area": "#ffffff",
+    "displays-a-form-textarea-or-a-component-that-looks-like-a-textarea": "#475569",
+    "a-popup-that-displays-information-related-to-an-element-when-receives-keyboard-focus-or-the-mouse-hovers-over-it": "#475569",
+    "displays-rich-content-in-a-portal-triggered-by-a-button": "#475569",
+    "displays-an-indicator-showing-the-completion-progress-of-a-task-typically-displayed-as-a-progress-bar": "#475569",
+    "radio-group": "#0f172a",
+    "a-set-of-checkable-buttonsknown-as-radio-buttonswhere-no-more-than-one-of-the-buttons-can-be-checked-at-a-time": "#475569",
+    "scroll-area": "#ffffff",
+    "tags": "#0f172a",
+    "v120-beta50": "#0f172a",
+    "select": "#ffffff",
+    "displays-a-list-of-options-for-the-user-to-pick-fromtriggered-by-a-button": "#475569",
+    "select-an-option": "#0f172a",
+    "iconchevron-down": "#ffffff",
+    "for-sighted-users-to-preview-content-available-behind-a-link": "#475569",
+    "inout": "#ffffff",
+    "displays-a-form-input-field-or-a-component-that-looks-like-an-input-field": "#475569",
+    "renders-an-accessible-label-associated-with-controls": "#475569",
+    "menubar": "#ffffff",
+    "a-visually-persistent-menu-common-in-desktop-applications-that-provides-quick-access-to-a-consistent-set-of-commands": "#475569",
+    "menubar-item": "#ffffff",
+    "file": "#000000",
+    "edit": "#000000",
+    "middle-section": "#ffffff",
+    "navigation-menu": "#0f172a",
+    "a-collection-of-links-for-navigating-websites": "#475569",
+    "navigation-menu-item": "#ffffff",
+    "getting-started": "#0f172a",
+    "iconchevron-up": "#ffffff",
+    "navigation-menu-content": "#ffffff",
+    "beautifully-designed-components-built-with-radix-ui-and-tailwind-css": "#e2e8f0",
+    "checkbox": "#0f172a",
+    "collapsible": "#0f172a",
+    "peduarte-stared-3-repositories": "#000000",
+    "iconchevrons-down-up": "#ffffff",
+    "login-with-email": "#ffffff",
+    "command": "#0f172a",
+    "fast-composable-unstyled-command-menu-for-react": "#475569",
+    "iconsearch": "#ffffff",
+    "frame-9": "#ffffff",
+    "iconcalendar": "#ffffff",
+    "iconsmile": "#ffffff",
+    "iconcalculator": "#ffffff",
+    "bottom": "#ffffff",
+    "context-menu": "#0f172a",
+    "displays-a-menu-to-the-user--such-as-a-set-of-actions-or-functions--triggered-by-a-button": "#475569",
+    "dialog": "#ffffff",
+    "a-modal-dialog-that-interrupts-the-user-with-important-content-and-expects-a-response": "#0f172a",
+    "title": "#0f172a",
+    "make-changes-to-your-profile-here-click-save-when-youre-done": "#64748b",
+    "name": "#000000",
+    "inputsmall": "#ffffff",
+    "username": "#000000",
+    "dropdown-menu": "#0f172a",
+    "accordion": "#ffffff",
+    "a-vertically-stacked-set-of-interactive-headings-that-each-reveal-an-associated-section-of-content": "#475569",
+    "accordion-item": "#ffffff",
+    "is-it-accessible": "#0f172a",
+    "chevron-down": "#ffffff",
+    "accordio-item-opened": "#ffffff",
+    "yes-it-adheres-to-the-wai-aria-design-pattern": "#0f172a",
+    "alert-dialog": "#0f172a",
+    "alter-dialog": "#ffffff",
+    "this-action-cannot-be-undone-this-will-permanently-delete-your-account-and-remove-your-data-from-our-servers": "#64748b",
+    "cancel": "#0f172a",
+    "aspect-ratio": "#0f172a",
+    "displays-content-within-a-desired-ratio": "#475569",
+    "avatar": "#0f172a",
+    "an-image-element-with-a-fallback-for-representing-the-user": "#475569",
+    "displays-a-button-or-a-component-that-looks-like-a-button": "#475569",
+    "typography": "#0f172a",
+    "styles-for-headings-paragraphs-listsetc": "#475569",
+    "h1": "#0f172a",
+    "taxing-laughter-the-joke-tax-chronicles": "#0f172a",
+    "h2": "#0f172a",
+    "the-people-of-the-kingdom": "#0f172a",
+    "h3": "#0f172a",
+    "the-joke-tax": "#0f172a",
+    "h4": "#0f172a",
+    "people-stopped-telling-jokes": "#0f172a",
+    "p": "#0f172a",
+    "the-king-seeing-how-much-happier-his-subjects-were-realized-the-error-of-his-ways-and-repealed-the-joke-tax": "#0f172a",
+    "blockquote": "#0f172a",
+    "after-all-he-said-everyone-enjoys-a-good-joke-so-its-only-fair-that-they-should-pay-for-the-privilege": "#0f172a",
+    "table": "#0f172a",
+    "table-item": "#ffffff",
+    "kings-treasury": "#0f172a",
+    "empty": "#0f172a",
+    "modest": "#0f172a",
+    "list": "#ffffff",
+    "1st-level-of-puns-5-gold-coins": "#0f172a",
+    "2nd-level-of-jokes-10-gold-coins": "#0f172a",
+    "3rd-level-of-one-liners--20-gold-coins": "#0f172a",
+    "inline-code": "#f1f5f9",
+    "radix-uireact-alert-dialog": "#000000",
+    "lead": "#0f172a",
+    "large": "#0f172a",
+    "are-you-sure-absolutely-sure": "#000000",
+    "small": "#0f172a",
+    "email-address": "#000000",
+    "subtle": "#0f172a",
+    "slate": "#000000",
+    "slate-50": "#f8fafc",
+    "f8fafc": "#94a3b8",
+    "typedefault-statedefault": "#0f172a",
+    "typeprimary-button-statehover": "#334155",
+    "typedestructive-statedefault": "#ef4444",
+    "destructive": "#ffffff",
+    "typedestructive-statehover": "#dc2626",
+    "typeoutline-statedefault": "#ffffff",
+    "typeoutline-statehover": "#f1f5f9",
+    "typesubtle-statedefault": "#f1f5f9",
+    "typesubtle-statehover": "#e2e8f0",
+    "typeghost-statedefault": "#ffffff",
+    "ghost": "#0f172a",
+    "typeghost-statehover": "#f1f5f9",
+    "typelink-statedefault": "#ffffff",
+    "link": "#0f172a",
+    "typelink-statehover": "#ffffff",
+    "typewith-icon-statedefault": "#0f172a",
+    "typejust-icon-statedefault": "#ffffff",
+    "typejust-icon-statehover": "#f1f5f9",
+    "typejust-icon-circle-statedefault": "#ffffff",
+    "typejust-icon-circle-statehover": "#f1f5f9",
+    "typewith-icon-statehover": "#334155",
+    "mail": "#ffffff",
+    "typeloading-statedefault": "#0f172a",
+    "loading": "#ffffff",
+    "typedivider": "#ffffff",
+    "typetop-section": "#ffffff",
+    "typemiddle-section": "#ffffff",
+    "typetitle-section": "#ffffff",
+    "typebottom-section": "#ffffff",
+    "statedefault-typedefault": "#ffffff",
+    "statediabled-typedefault": "#ffffff",
+    "statedefault-typesection-title": "#ffffff",
+    "statehover-typedefault": "#f1f5f9",
+    "typewith-padding-left": "#ffffff",
+    "people": "#0f172a",
+    "typedefault": "#ffffff",
+    "stateselected": "#f1f5f9",
+    "stateunselected": "#ffffff",
+    "stateclosed": "#ffffff",
+    "stateopen": "#ffffff",
+    "statedefault": "#ffffff",
+    "typedropdown-statedefault": "#ffffff",
+    "typedefault-stateselected": "#f1f5f9",
+    "typelink-stateselected": "#f1f5f9",
+    "typewith-picture": "#ffffff",
+    "typetwo-columns": "#ffffff",
+    "typing-something": "#0f172a",
+    "add-value": "#94a3b8",
+    "cn": "#0f172a",
+    "you-agree-to-our-terms-of-service-and-privacy-policy": "#64748b",
+    "primitives": "#0f172a",
+    "those-are-the-atomic-parts-that-make-your-components-do-not-edit-unless-you-strictly-want-to": "#475569",
+    "typetable-head-statedefault": "#ffffff",
+    "typetable-item-statedefault": "#ffffff",
+    "typetable-item-stateselected": "#f1f5f9",
+    "iconaccessibility": "#ffffff",
+    "iconactivity": "#ffffff",
+    "iconair-vent": "#ffffff",
+    "iconairplay": "#ffffff",
+    "iconalarm-check": "#ffffff",
+    "iconalarm-clock-off": "#ffffff",
+    "iconalarm-clock": "#ffffff",
+    "iconalarm-minus": "#ffffff",
+    "iconalarm-plus": "#ffffff",
+    "iconalbum": "#ffffff",
+    "iconalert-circle": "#ffffff",
+    "iconalert-octagon": "#ffffff",
+    "iconalert-triangle": "#ffffff",
+    "iconalign-center-horizontal": "#ffffff",
+    "iconalign-center-vertical": "#ffffff",
+    "iconalign-center": "#ffffff",
+    "iconalign-end-horizontal": "#ffffff",
+    "iconalign-end-vertical": "#ffffff",
+    "iconalign-horizontal-distribute-center": "#ffffff",
+    "iconalign-horizontal-distribute-end": "#ffffff",
+    "iconalign-horizontal-distribute-start": "#ffffff",
+    "iconalign-horizontal-justify-center": "#ffffff",
+    "iconalign-horizontal-justify-end": "#ffffff",
+    "iconalign-horizontal-justify-start": "#ffffff",
+    "iconalign-horizontal-space-around": "#ffffff",
+    "iconalign-horizontal-space-between": "#ffffff",
+    "iconalign-justify": "#ffffff",
+    "iconalign-left": "#ffffff",
+    "iconalign-right": "#ffffff",
+    "iconalign-start-horizontal": "#ffffff",
+    "iconalign-start-vertical": "#ffffff",
+    "iconalign-vertical-distribute-center": "#ffffff",
+    "iconalign-vertical-distribute-end": "#ffffff",
+    "iconalign-vertical-distribute-start": "#ffffff",
+    "iconalign-vertical-justify-center": "#ffffff",
+    "iconalign-vertical-justify-end": "#ffffff",
+    "iconalign-vertical-justify-start": "#ffffff",
+    "iconalign-vertical-space-around": "#ffffff",
+    "iconalign-vertical-space-between": "#ffffff",
+    "iconanchor": "#ffffff",
+    "iconangry": "#ffffff",
+    "iconannoyed": "#ffffff",
+    "iconaperture": "#ffffff",
+    "iconapple": "#ffffff",
+    "iconarchive-restore": "#ffffff",
+    "iconarchive": "#ffffff",
+    "iconarmchair": "#ffffff",
+    "iconarrow-big-down": "#ffffff",
+    "iconarrow-big-left": "#ffffff",
+    "iconarrow-big-right": "#ffffff",
+    "iconarrow-big-up": "#ffffff",
+    "iconarrow-down-circle": "#ffffff",
+    "iconarrow-down-left": "#ffffff",
+    "iconarrow-down-right": "#ffffff",
+    "iconarrow-down": "#ffffff",
+    "iconarrow-left-circle": "#ffffff",
+    "iconarrow-left-right": "#ffffff",
+    "iconarrow-left": "#ffffff",
+    "iconarrow-right-circle": "#ffffff",
+    "iconarrow-right": "#ffffff",
+    "iconarrow-up-circle": "#ffffff",
+    "iconarrow-up-down": "#ffffff",
+    "iconarrow-up-left": "#ffffff",
+    "iconarrow-up-right": "#ffffff",
+    "iconarrow-up": "#ffffff",
+    "iconasterisk": "#ffffff",
+    "iconat-sign": "#ffffff",
+    "iconaward": "#ffffff",
+    "iconaxe": "#ffffff",
+    "iconaxis-3d": "#ffffff",
+    "iconbaby": "#ffffff",
+    "iconbackpack": "#ffffff",
+    "iconbaggage-claim": "#ffffff",
+    "iconbanana": "#ffffff",
+    "iconbanknote": "#ffffff",
+    "iconbar-chart-2": "#ffffff",
+    "iconbar-chart-3": "#ffffff",
+    "iconbar-chart-4": "#ffffff",
+    "iconbar-chart-horizontal": "#ffffff",
+    "iconbar-chart": "#ffffff",
+    "iconbaseline": "#ffffff",
+    "iconbath": "#ffffff",
+    "iconbattery-charging": "#ffffff",
+    "iconbattery-full": "#ffffff",
+    "iconbattery-low": "#ffffff",
+    "iconbattery-medium": "#ffffff",
+    "iconbattery-warning": "#ffffff",
+    "iconbattery": "#ffffff",
+    "iconbeaker": "#ffffff",
+    "iconbean-off": "#ffffff",
+    "iconbean": "#ffffff",
+    "iconbed-double": "#ffffff",
+    "iconbed-single": "#ffffff",
+    "iconbed": "#ffffff",
+    "iconbeef": "#ffffff",
+    "iconbeer": "#ffffff",
+    "iconbell-minus": "#ffffff",
+    "iconbell-off": "#ffffff",
+    "iconbell-plus": "#ffffff",
+    "iconbell-ring": "#ffffff",
+    "iconbell": "#ffffff",
+    "iconbike": "#ffffff",
+    "iconbinary": "#ffffff",
+    "iconbitcoin": "#ffffff",
+    "iconbluetooth-connected": "#ffffff",
+    "iconbluetooth-off": "#ffffff",
+    "iconbluetooth-searching": "#ffffff",
+    "iconbluetooth": "#ffffff",
+    "iconbold": "#ffffff",
+    "iconbomb": "#ffffff",
+    "iconbone": "#ffffff",
+    "iconbook-open-check": "#ffffff",
+    "iconbook-open": "#ffffff",
+    "iconbook": "#ffffff",
+    "iconbookmark-minus": "#ffffff",
+    "iconbookmark-plus": "#ffffff",
+    "iconbookmark": "#ffffff",
+    "iconbot": "#ffffff",
+    "iconbox-select": "#ffffff",
+    "iconbox": "#ffffff",
+    "iconboxes": "#ffffff",
+    "iconbriefcase": "#ffffff",
+    "iconbrush": "#ffffff",
+    "iconbug": "#ffffff",
+    "iconbuilding-2": "#ffffff",
+    "iconbuilding": "#ffffff",
+    "iconbus": "#ffffff",
+    "iconcake": "#ffffff",
+    "iconcalendar-check-2": "#ffffff",
+    "iconcalendar-check": "#ffffff",
+    "iconcalendar-clock": "#ffffff",
+    "iconcalendar-days": "#ffffff",
+    "iconcalendar-heart": "#ffffff",
+    "iconcalendar-minus": "#ffffff",
+    "iconcalendar-off": "#ffffff",
+    "iconcalendar-plus": "#ffffff",
+    "iconcalendar-range": "#ffffff",
+    "iconcalendar-search": "#ffffff",
+    "iconcalendar-x-2": "#ffffff",
+    "iconcalendar-x": "#ffffff",
+    "iconcamera-off": "#ffffff",
+    "iconcamera": "#ffffff",
+    "iconcandy-off": "#ffffff",
+    "iconcandy": "#ffffff",
+    "iconcar": "#ffffff",
+    "iconcarrot": "#ffffff",
+    "iconcast": "#ffffff",
+    "iconcat": "#ffffff",
+    "iconcheck-check": "#ffffff",
+    "iconcheck-circle-2": "#ffffff",
+    "iconcheck-circle": "#ffffff",
+    "iconcheck-square": "#ffffff",
+    "iconchef-hat": "#ffffff",
+    "iconcherry": "#ffffff",
+    "iconchevron-first": "#ffffff",
+    "iconchevron-last": "#ffffff",
+    "iconchevron-left": "#ffffff",
+    "iconchevron-right": "#ffffff",
+    "iconchevrons-down": "#ffffff",
+    "iconchevrons-left-right": "#ffffff",
+    "iconchevrons-left": "#ffffff",
+    "iconchevrons-right-left": "#ffffff",
+    "iconchevrons-right": "#ffffff",
+    "iconchevrons-up-down": "#ffffff",
+    "iconchevrons-up": "#ffffff",
+    "iconchrome": "#ffffff",
+    "iconcigarette-off": "#ffffff",
+    "iconcigarette": "#ffffff",
+    "iconcircle-dot": "#ffffff",
+    "iconcircle-ellipsis": "#ffffff",
+    "iconcircle-slashed": "#ffffff",
+    "iconcircle": "#ffffff",
+    "iconcitrus": "#ffffff",
+    "iconclapperboard": "#ffffff",
+    "iconclipboard-check": "#ffffff",
+    "iconclipboard-copy": "#ffffff",
+    "iconclipboard-edit": "#ffffff",
+    "iconclipboard-list": "#ffffff",
+    "iconclipboard-signature": "#ffffff",
+    "iconclipboard-type": "#ffffff",
+    "iconclipboard-x": "#ffffff",
+    "iconclipboard": "#ffffff",
+    "iconclock-1": "#ffffff",
+    "iconclock-2": "#ffffff",
+    "iconclock-3": "#ffffff",
+    "iconclock-4": "#ffffff",
+    "iconclock-5": "#ffffff",
+    "iconclock-6": "#ffffff",
+    "iconclock-7": "#ffffff",
+    "iconclock-8": "#ffffff",
+    "iconclock-9": "#ffffff",
+    "iconclock-10": "#ffffff",
+    "iconclock-11": "#ffffff",
+    "iconclock-12": "#ffffff",
+    "iconclock": "#ffffff",
+    "iconcloud-cog": "#ffffff",
+    "iconcloud-drizzle": "#ffffff",
+    "iconcloud-fog": "#ffffff",
+    "iconcloud-hail": "#ffffff",
+    "iconcloud-lightning": "#ffffff",
+    "iconcloud-moon-rain": "#ffffff",
+    "iconcloud-moon": "#ffffff",
+    "iconcloud-off": "#ffffff",
+    "iconcloud-rain-wind": "#ffffff",
+    "iconcloud-rain": "#ffffff",
+    "iconcloud-snow": "#ffffff",
+    "iconcloud-sun-rain": "#ffffff",
+    "iconcloud-sun": "#ffffff",
+    "iconcloudy": "#ffffff",
+    "iconclover": "#ffffff",
+    "iconcode-2": "#ffffff",
+    "iconcode": "#ffffff",
+    "iconcodepen": "#ffffff",
+    "iconcodesandbox": "#ffffff",
+    "iconcoffee": "#ffffff",
+    "iconcog": "#ffffff",
+    "iconcoins": "#ffffff",
+    "iconcolumns": "#ffffff",
+    "iconcommand": "#ffffff",
+    "iconcompass": "#ffffff",
+    "iconcomponent": "#ffffff",
+    "iconconcierge-bell": "#ffffff",
+    "iconcontact": "#ffffff",
+    "iconcontrast": "#ffffff",
+    "iconcookie": "#ffffff",
+    "iconcopy": "#ffffff",
+    "iconcopyleft": "#ffffff",
+    "iconcopyright": "#ffffff",
+    "iconcorner-down-left": "#ffffff",
+    "iconcorner-down-right": "#ffffff",
+    "iconcorner-left-down": "#ffffff",
+    "iconcorner-left-up": "#ffffff",
+    "iconcorner-right-down": "#ffffff",
+    "iconcorner-right-up": "#ffffff",
+    "iconcorner-up-left": "#ffffff",
+    "iconcorner-up-right": "#ffffff",
+    "iconcpu": "#ffffff",
+    "iconcroissant": "#ffffff",
+    "iconcrop": "#ffffff",
+    "iconcross": "#ffffff",
+    "iconcrosshair": "#ffffff",
+    "iconcrown": "#ffffff",
+    "iconcup-soda": "#ffffff",
+    "iconcurly-braces": "#ffffff",
+    "iconcurrency": "#ffffff",
+    "icondatabase-backup": "#ffffff",
+    "icondatabase": "#ffffff",
+    "icondelete": "#ffffff",
+    "icondiamond": "#ffffff",
+    "icondice-1": "#ffffff",
+    "icondice-2": "#ffffff",
+    "icondice-3": "#ffffff",
+    "icondice-4": "#ffffff",
+    "icondice-5": "#ffffff",
+    "icondice-6": "#ffffff",
+    "icondices": "#ffffff",
+    "icondiff": "#ffffff",
+    "icondisc": "#ffffff",
+    "icondivide-circle": "#ffffff",
+    "icondivide-square": "#ffffff",
+    "icondivide": "#ffffff",
+    "icondna-off": "#ffffff",
+    "icondna": "#ffffff",
+    "icondog": "#ffffff",
+    "icondollar-sign": "#ffffff",
+    "icondownload-cloud": "#ffffff",
+    "icondownload": "#ffffff",
+    "icondribbble": "#ffffff",
+    "icondroplet": "#ffffff",
+    "icondroplets": "#ffffff",
+    "icondrumstick": "#ffffff",
+    "icondumbbell": "#ffffff",
+    "iconear-off": "#ffffff",
+    "iconear": "#ffffff",
+    "iconedit-2": "#ffffff",
+    "iconedit-3": "#ffffff",
+    "iconedit": "#ffffff",
+    "iconegg-fried": "#ffffff",
+    "iconegg-off": "#ffffff",
+    "iconegg": "#ffffff",
+    "iconequal-not": "#ffffff",
+    "iconequal": "#ffffff",
+    "iconeraser": "#ffffff",
+    "iconeuro": "#ffffff",
+    "iconexpand": "#ffffff",
+    "iconexternal-link": "#ffffff",
+    "iconeye-off": "#ffffff",
+    "iconeye": "#ffffff",
+    "iconfacebook": "#ffffff",
+    "iconfactory": "#ffffff",
+    "iconfan": "#ffffff",
+    "iconfast-forward": "#ffffff",
+    "iconfeather": "#ffffff",
+    "iconfigma": "#ffffff",
+    "iconfile-archive": "#ffffff",
+    "iconfile-audio-2": "#ffffff",
+    "iconfile-audio": "#ffffff",
+    "iconfile-axis-3d": "#ffffff",
+    "iconfile-badge-2": "#ffffff",
+    "iconfile-badge": "#ffffff",
+    "iconfile-bar-chart-2": "#ffffff",
+    "iconfile-bar-chart": "#ffffff",
+    "iconfile-box": "#ffffff",
+    "iconfile-check-2": "#ffffff",
+    "iconfile-check": "#ffffff",
+    "iconfile-clock": "#ffffff",
+    "iconfile-code": "#ffffff",
+    "iconfile-cog-2": "#ffffff",
+    "iconfile-cog": "#ffffff",
+    "iconfile-diff": "#ffffff",
+    "iconfile-digit": "#ffffff",
+    "iconfile-down": "#ffffff",
+    "iconfile-edit": "#ffffff",
+    "iconfile-heart": "#ffffff",
+    "iconfile-image": "#ffffff",
+    "iconfile-input": "#ffffff",
+    "iconfile-json-2": "#ffffff",
+    "iconfile-json": "#ffffff",
+    "iconfile-key-2": "#ffffff",
+    "iconfile-key": "#ffffff",
+    "iconfile-line-chart": "#ffffff",
+    "iconfile-lock-2": "#ffffff",
+    "iconfile-lock": "#ffffff",
+    "iconfile-minus-2": "#ffffff",
+    "iconfile-minus": "#ffffff",
+    "iconfile-output": "#ffffff",
+    "iconfile-pie-chart": "#ffffff",
+    "iconfile-plus-2": "#ffffff",
+    "iconfile-plus": "#ffffff",
+    "iconfile-question": "#ffffff",
+    "iconfile-scan": "#ffffff",
+    "iconfile-search-2": "#ffffff",
+    "iconfile-search": "#ffffff",
+    "iconfile-signature": "#ffffff",
+    "iconfile-spreadsheet": "#ffffff",
+    "iconfile-symlink": "#ffffff",
+    "iconfile-terminal": "#ffffff",
+    "iconfile-text": "#ffffff",
+    "iconfile-type-2": "#ffffff",
+    "iconfile-type": "#ffffff",
+    "iconfile-up": "#ffffff",
+    "iconfile-video-2": "#ffffff",
+    "iconfile-video": "#ffffff",
+    "iconfile-volume-2": "#ffffff",
+    "iconfile-volume": "#ffffff",
+    "iconfile-warning": "#ffffff",
+    "iconfile-x-2": "#ffffff",
+    "iconfile-x": "#ffffff",
+    "iconfile": "#ffffff",
+    "iconfiles": "#ffffff",
+    "iconfilm": "#ffffff",
+    "iconfilter": "#ffffff",
+    "iconfingerprint": "#ffffff",
+    "iconfish": "#ffffff",
+    "iconflag-off": "#ffffff",
+    "iconflag-triangle-left": "#ffffff",
+    "iconflag-triangle-right": "#ffffff",
+    "iconflag": "#ffffff",
+    "iconflame": "#ffffff",
+    "iconflashlight-off": "#ffffff",
+    "iconflashlight": "#ffffff",
+    "iconflask-conical-off": "#ffffff",
+    "iconflask-conical": "#ffffff",
+    "iconflask-round": "#ffffff",
+    "iconflip-horizontal-2": "#ffffff",
+    "iconflip-horizontal": "#ffffff",
+    "iconflip-vertical-2": "#ffffff",
+    "iconflip-vertical": "#ffffff",
+    "iconflower-2": "#ffffff",
+    "iconflower": "#ffffff",
+    "iconfocus": "#ffffff",
+    "iconfolder-archive": "#ffffff",
+    "iconfolder-check": "#ffffff",
+    "iconfolder-clock": "#ffffff",
+    "iconfolder-closed": "#ffffff",
+    "iconfolder-cog-2": "#ffffff",
+    "iconfolder-cog": "#ffffff",
+    "iconfolder-down": "#ffffff",
+    "iconfolder-edit": "#ffffff",
+    "iconfolder-heart": "#ffffff",
+    "iconfolder-input": "#ffffff",
+    "iconfolder-key": "#ffffff",
+    "iconfolder-lock": "#ffffff",
+    "iconfolder-minus": "#ffffff",
+    "iconfolder-open": "#ffffff",
+    "iconfolder-output": "#ffffff",
+    "iconfolder-plus": "#ffffff",
+    "iconfolder-search-2": "#ffffff",
+    "iconfolder-search": "#ffffff",
+    "iconfolder-symlink": "#ffffff",
+    "iconfolder-tree": "#ffffff",
+    "iconfolder-up": "#ffffff",
+    "iconfolder-x": "#ffffff",
+    "iconfolder": "#ffffff",
+    "iconfolders": "#ffffff",
+    "iconform-input": "#ffffff",
+    "iconforward": "#ffffff",
+    "iconframe": "#ffffff",
+    "iconframer": "#ffffff",
+    "iconfrown": "#ffffff",
+    "iconfuel": "#ffffff",
+    "iconfunction-square": "#ffffff",
+    "icongamepad-2": "#ffffff",
+    "icongamepad": "#ffffff",
+    "icongauge": "#ffffff",
+    "icongavel": "#ffffff",
+    "icongem": "#ffffff",
+    "iconghost": "#ffffff",
+    "icongift": "#ffffff",
+    "icongit-branch-plus": "#ffffff",
+    "icongit-branch": "#ffffff",
+    "icongit-commit": "#ffffff",
+    "icongit-compare": "#ffffff",
+    "icongit-fork": "#ffffff",
+    "icongit-merge": "#ffffff",
+    "icongit-pull-request-closed": "#ffffff",
+    "icongit-pull-request-draft": "#ffffff",
+    "icongit-pull-request": "#ffffff",
+    "icongithub": "#ffffff",
+    "icongitlab": "#ffffff",
+    "iconglass-water": "#ffffff",
+    "iconglasses": "#ffffff",
+    "iconglobe-2": "#ffffff",
+    "iconglobe": "#ffffff",
+    "icongrab": "#ffffff",
+    "icongraduation-cap": "#ffffff",
+    "icongrape": "#ffffff",
+    "icongrid": "#ffffff",
+    "icongrip-horizontal": "#ffffff",
+    "icongrip-vertical": "#ffffff",
+    "iconhammer": "#ffffff",
+    "iconhand-metal": "#ffffff",
+    "iconhand": "#ffffff",
+    "iconhard-drive": "#ffffff",
+    "iconhard-hat": "#ffffff",
+    "iconhash": "#ffffff",
+    "iconhaze": "#ffffff",
+    "iconheading-1": "#ffffff",
+    "iconheading-2": "#ffffff",
+    "iconheading-3": "#ffffff",
+    "iconheading-4": "#ffffff",
+    "iconheading-5": "#ffffff",
+    "iconheading-6": "#ffffff",
+    "iconheading": "#ffffff",
+    "iconheadphones": "#ffffff",
+    "iconheart-crack": "#ffffff",
+    "iconheart-handshake": "#ffffff",
+    "iconheart-off": "#ffffff",
+    "iconheart-pulse": "#ffffff",
+    "iconheart": "#ffffff",
+    "iconhelp-circle": "#ffffff",
+    "iconhexagon": "#ffffff",
+    "iconhighlighter": "#ffffff",
+    "iconhistory": "#ffffff",
+    "iconhome": "#ffffff",
+    "iconhop-off": "#ffffff",
+    "iconhop": "#ffffff",
+    "iconhourglass": "#ffffff",
+    "iconice-cream-2": "#ffffff",
+    "iconice-cream": "#ffffff",
+    "iconimage-minus": "#ffffff",
+    "iconimage-off": "#ffffff",
+    "iconimage-plus": "#ffffff",
+    "iconimage": "#ffffff",
+    "iconimport": "#ffffff",
+    "iconinbox": "#ffffff",
+    "iconindent": "#ffffff",
+    "iconindian-rupee": "#ffffff",
+    "iconinfinity": "#ffffff",
+    "iconinfo": "#ffffff",
+    "iconinspect": "#ffffff",
+    "iconinstagram": "#ffffff",
+    "iconitalic": "#ffffff",
+    "iconjapanese-yen": "#ffffff",
+    "iconjoystick": "#ffffff",
+    "iconkey": "#ffffff",
+    "iconlamp-ceiling": "#ffffff",
+    "iconlamp-desk": "#ffffff",
+    "iconlamp-floor": "#ffffff",
+    "iconlamp-wall-down": "#ffffff",
+    "iconlamp-wall-up": "#ffffff",
+    "iconlamp": "#ffffff",
+    "iconlandmark": "#ffffff",
+    "iconlanguages": "#ffffff",
+    "iconlaptop-2": "#ffffff",
+    "iconlaptop": "#ffffff",
+    "iconlasso-select": "#ffffff",
+    "iconlasso": "#ffffff",
+    "iconlaugh": "#ffffff",
+    "iconlayers": "#ffffff",
+    "iconlayout-dashboard": "#ffffff",
+    "iconlayout-grid": "#ffffff",
+    "iconlayout-list": "#ffffff",
+    "iconlayout-template": "#ffffff",
+    "iconlayout": "#ffffff",
+    "iconleaf": "#ffffff",
+    "iconlibrary": "#ffffff",
+    "iconlife-buoy": "#ffffff",
+    "iconlightbulb-off": "#ffffff",
+    "iconlightbulb": "#ffffff",
+    "iconline-chart": "#ffffff",
+    "iconlink-2-off": "#ffffff",
+    "iconlink-2": "#ffffff",
+    "iconlink": "#ffffff",
+    "iconlinkedin": "#ffffff",
+    "iconlist-checks": "#ffffff",
+    "iconlist-end": "#ffffff",
+    "iconlist-minus": "#ffffff",
+    "iconlist-music": "#ffffff",
+    "iconlist-ordered": "#ffffff",
+    "iconlist-plus": "#ffffff",
+    "iconlist-start": "#ffffff",
+    "iconlist-video": "#ffffff",
+    "iconlist-x": "#ffffff",
+    "iconlist": "#ffffff",
+    "iconloader-2": "#ffffff",
+    "iconloader": "#ffffff",
+    "iconlocate-fixed": "#ffffff",
+    "iconlocate-off": "#ffffff",
+    "iconlocate": "#ffffff",
+    "iconlock": "#ffffff",
+    "iconlog-in": "#ffffff",
+    "iconluggage": "#ffffff",
+    "iconmagnet": "#ffffff",
+    "iconmail-check": "#ffffff",
+    "iconmail-minus": "#ffffff",
+    "iconmail-open": "#ffffff",
+    "iconmail-plus": "#ffffff",
+    "iconmail-question": "#ffffff",
+    "iconmail-search": "#ffffff",
+    "iconmail-warning": "#ffffff",
+    "iconmail-x": "#ffffff",
+    "iconmails": "#ffffff",
+    "iconmap-pin-off": "#ffffff",
+    "iconmap-pin": "#ffffff",
+    "iconmap": "#ffffff",
+    "iconmartini": "#ffffff",
+    "iconmaximize-2": "#ffffff",
+    "iconmaximize": "#ffffff",
+    "iconmedal": "#ffffff",
+    "iconmegaphone-off": "#ffffff",
+    "iconmegaphone": "#ffffff",
+    "iconmeh": "#ffffff",
+    "iconmenu": "#ffffff",
+    "iconmessage-circle": "#ffffff",
+    "iconmic-2": "#ffffff",
+    "iconmic-off": "#ffffff",
+    "iconmic": "#ffffff",
+    "iconmicroscope": "#ffffff",
+    "iconmicrowave": "#ffffff",
+    "iconmilestone": "#ffffff",
+    "iconmilk-off": "#ffffff",
+    "iconmilk": "#ffffff",
+    "iconminimize-2": "#ffffff",
+    "iconminimize": "#ffffff",
+    "iconminus-circle": "#ffffff",
+    "iconminus-square": "#ffffff",
+    "iconminus": "#ffffff",
+    "iconmonitor-off": "#ffffff",
+    "iconmonitor-smartphone": "#ffffff",
+    "iconmonitor-speaker": "#ffffff",
+    "iconmonitor": "#ffffff",
+    "iconmoon": "#ffffff",
+    "iconmore-horizontal": "#ffffff",
+    "iconmore-vertical": "#ffffff",
+    "iconmountain-snow": "#ffffff",
+    "iconmountain": "#ffffff",
+    "iconmouse-pointer-2": "#ffffff",
+    "iconmouse-pointer-click": "#ffffff",
+    "iconmouse-pointer": "#ffffff",
+    "iconmouse": "#ffffff",
+    "iconmove-3d": "#ffffff",
+    "iconmove-diagonal-2": "#ffffff",
+    "iconmove-diagonal": "#ffffff",
+    "iconmove-horizontal": "#ffffff",
+    "iconmove-vertical": "#ffffff",
+    "iconmove": "#ffffff",
+    "iconmusic-2": "#ffffff",
+    "iconmusic-3": "#ffffff",
+    "iconmusic-4": "#ffffff",
+    "iconmusic": "#ffffff",
+    "iconnavigation-2-off": "#ffffff",
+    "iconnavigation-2": "#ffffff",
+    "iconnavigation-off": "#ffffff",
+    "iconnavigation": "#ffffff",
+    "iconnetwork": "#ffffff",
+    "iconnewspaper": "#ffffff",
+    "iconnut-off": "#ffffff",
+    "iconnut": "#ffffff",
+    "iconoctagon": "#ffffff",
+    "iconoption": "#ffffff",
+    "iconoutdent": "#ffffff",
+    "iconpackage-2": "#ffffff",
+    "iconpackage-check": "#ffffff",
+    "iconpackage-minus": "#ffffff",
+    "iconpackage-open": "#ffffff",
+    "iconpackage-plus": "#ffffff",
+    "iconpackage-search": "#ffffff",
+    "iconpackage-x": "#ffffff",
+    "iconpackage": "#ffffff",
+    "iconpaint-bucket": "#ffffff",
+    "iconpaintbrush-2": "#ffffff",
+    "iconpaintbrush": "#ffffff",
+    "iconpalette": "#ffffff",
+    "iconpalmtree": "#ffffff",
+    "iconpaperclip": "#ffffff",
+    "iconparty-popper": "#ffffff",
+    "iconpause-circle": "#ffffff",
+    "iconpause-octagon": "#ffffff",
+    "iconpause": "#ffffff",
+    "iconpen-tool": "#ffffff",
+    "iconpencil": "#ffffff",
+    "iconpercent": "#ffffff",
+    "iconperson-standing": "#ffffff",
+    "iconphone-call": "#ffffff",
+    "iconphone-forwarded": "#ffffff",
+    "iconphone-incoming": "#ffffff",
+    "iconphone-missed": "#ffffff",
+    "iconphone-off": "#ffffff",
+    "iconphone-outgoing": "#ffffff",
+    "iconphone": "#ffffff",
+    "iconpie-chart": "#ffffff",
+    "iconpiggy-bank": "#ffffff",
+    "iconpilcrow": "#ffffff",
+    "iconpin-off": "#ffffff",
+    "iconpin": "#ffffff",
+    "iconpipette": "#ffffff",
+    "iconpizza": "#ffffff",
+    "iconplane": "#ffffff",
+    "iconplay-circle": "#ffffff",
+    "iconplay": "#ffffff",
+    "iconplug-2": "#ffffff",
+    "iconplug-zap": "#ffffff",
+    "iconplug": "#ffffff",
+    "iconplus-circle": "#ffffff",
+    "iconplus-square": "#ffffff",
+    "iconpocket": "#ffffff",
+    "iconpodcast": "#ffffff",
+    "iconpointer": "#ffffff",
+    "iconpound-sterling": "#ffffff",
+    "iconpower-off": "#ffffff",
+    "iconpower": "#ffffff",
+    "iconprinter": "#ffffff",
+    "iconpuzzle": "#ffffff",
+    "iconqr-code": "#ffffff",
+    "iconquote": "#ffffff",
+    "iconradio-receiver": "#ffffff",
+    "iconradio": "#ffffff",
+    "iconrectangle-horizontal": "#ffffff",
+    "iconrectangle-vertical": "#ffffff",
+    "iconrecycle": "#ffffff",
+    "iconredo-2": "#ffffff",
+    "iconredo": "#ffffff",
+    "iconrefresh-ccw": "#ffffff",
+    "iconrefresh-cw": "#ffffff",
+    "iconrefrigerator": "#ffffff",
+    "iconregex": "#ffffff",
+    "iconrepeat-1": "#ffffff",
+    "iconrepeat": "#ffffff",
+    "iconreply-all": "#ffffff",
+    "iconreply": "#ffffff",
+    "iconrewind": "#ffffff",
+    "iconrocket": "#ffffff",
+    "iconrocking-chair": "#ffffff",
+    "iconrotate-3d": "#ffffff",
+    "iconrotate-ccw": "#ffffff",
+    "iconrotate-cw": "#ffffff",
+    "iconrss": "#ffffff",
+    "iconruler": "#ffffff",
+    "iconrussian-ruble": "#ffffff",
+    "iconsailboat": "#ffffff",
+    "iconsalad": "#ffffff",
+    "iconsandwich": "#ffffff",
+    "iconsave": "#ffffff",
+    "iconscale-3d": "#ffffff",
+    "iconscale": "#ffffff",
+    "iconscaling": "#ffffff",
+    "iconscan-face": "#ffffff",
+    "iconscan-line": "#ffffff",
+    "iconscan": "#ffffff",
+    "iconscissors": "#ffffff",
+    "iconscreen-share-off": "#ffffff",
+    "iconscreen-share": "#ffffff",
+    "iconscroll": "#ffffff",
+    "iconsend": "#ffffff",
+    "iconseparator-horizontal": "#ffffff",
+    "iconseparator-vertical": "#ffffff",
+    "iconserver-cog": "#ffffff",
+    "iconserver-crash": "#ffffff",
+    "iconserver-off": "#ffffff",
+    "iconserver": "#ffffff",
+    "iconsettings-2": "#ffffff",
+    "iconshare-2": "#ffffff",
+    "iconshare": "#ffffff",
+    "iconsheet": "#ffffff",
+    "iconshield-alert": "#ffffff",
+    "iconshield-check": "#ffffff",
+    "iconshield-close": "#ffffff",
+    "iconshield-off": "#ffffff",
+    "iconshield": "#ffffff",
+    "iconshirt": "#ffffff",
+    "iconshopping-bag": "#ffffff",
+    "iconshopping-cart": "#ffffff",
+    "iconshovel": "#ffffff",
+    "iconshower-head": "#ffffff",
+    "iconshrink": "#ffffff",
+    "iconshrub": "#ffffff",
+    "iconshuffle": "#ffffff",
+    "iconsidebar-close": "#ffffff",
+    "iconsidebar-open": "#ffffff",
+    "iconsidebar": "#ffffff",
+    "iconsigma": "#ffffff",
+    "iconsignal-high": "#ffffff",
+    "iconsignal-low": "#ffffff",
+    "iconsignal-medium": "#ffffff",
+    "iconsignal-zero": "#ffffff",
+    "iconsignal": "#ffffff",
+    "iconsiren": "#ffffff",
+    "iconskip-back": "#ffffff",
+    "iconskip-forward": "#ffffff",
+    "iconskull": "#ffffff",
+    "iconslack": "#ffffff",
+    "iconslash": "#ffffff",
+    "iconslice": "#ffffff",
+    "iconsliders-horizontal": "#ffffff",
+    "iconsliders": "#ffffff",
+    "iconsmartphone-charging": "#ffffff",
+    "iconsmartphone": "#ffffff",
+    "iconsmile-plus": "#ffffff",
+    "iconsnowflake": "#ffffff",
+    "iconsofa": "#ffffff",
+    "iconsort-asc": "#ffffff",
+    "iconsort-desc": "#ffffff",
+    "iconsoup": "#ffffff",
+    "iconspeaker": "#ffffff",
+    "iconspline": "#ffffff",
+    "iconsprout": "#ffffff",
+    "iconsquare": "#ffffff",
+    "iconstar-half": "#ffffff",
+    "iconstar-off": "#ffffff",
+    "iconstar": "#ffffff",
+    "iconstethoscope": "#ffffff",
+    "iconsticker": "#ffffff",
+    "iconsticky-note": "#ffffff",
+    "iconstop-circle": "#ffffff",
+    "iconstretch-horizontal": "#ffffff",
+    "iconstretch-vertical": "#ffffff",
+    "iconstrikethrough": "#ffffff",
+    "iconsubscript": "#ffffff",
+    "iconsubtitles": "#ffffff",
+    "iconsun-dim": "#ffffff",
+    "iconsun-medium": "#ffffff",
+    "iconsun-moon": "#ffffff",
+    "iconsun-snow": "#ffffff",
+    "iconsun": "#ffffff",
+    "iconsunrise": "#ffffff",
+    "iconsunset": "#ffffff",
+    "iconsuperscript": "#ffffff",
+    "iconswiss-franc": "#ffffff",
+    "iconswitch-camera": "#ffffff",
+    "iconsword": "#ffffff",
+    "iconswords": "#ffffff",
+    "iconsyringe": "#ffffff",
+    "icontable-2": "#ffffff",
+    "icontable": "#ffffff",
+    "icontablet": "#ffffff",
+    "icontag": "#ffffff",
+    "icontags": "#ffffff",
+    "icontarget": "#ffffff",
+    "icontent": "#ffffff",
+    "iconterminal-square": "#ffffff",
+    "iconterminal": "#ffffff",
+    "icontext-cursor-input": "#ffffff",
+    "icontext-cursor": "#ffffff",
+    "iconthermometer-snowflake": "#ffffff",
+    "iconthermometer-sun": "#ffffff",
+    "iconthermometer": "#ffffff",
+    "iconthumbs-down": "#ffffff",
+    "iconthumbs-up": "#ffffff",
+    "iconticket": "#ffffff",
+    "icontimer-off": "#ffffff",
+    "icontimer-reset": "#ffffff",
+    "icontimer": "#ffffff",
+    "icontoggle-left": "#ffffff",
+    "icontoggle-right": "#ffffff",
+    "icontornado": "#ffffff",
+    "icontoy-brick": "#ffffff",
+    "icontrain": "#ffffff",
+    "icontrash-2": "#ffffff",
+    "icontrash": "#ffffff",
+    "icontree-deciduous": "#ffffff",
+    "icontree-pine": "#ffffff",
+    "icontrees": "#ffffff",
+    "icontrello": "#ffffff",
+    "icontrending-down": "#ffffff",
+    "icontrending-up": "#ffffff",
+    "icontriangle": "#ffffff",
+    "icontrophy": "#ffffff",
+    "icontruck": "#ffffff",
+    "icontv-2": "#ffffff",
+    "icontv": "#ffffff",
+    "icontwitch": "#ffffff",
+    "icontwitter": "#ffffff",
+    "icontype": "#ffffff",
+    "iconumbrella": "#ffffff",
+    "iconunderline": "#ffffff",
+    "iconundo-2": "#ffffff",
+    "iconundo": "#ffffff",
+    "iconunlink-2": "#ffffff",
+    "iconunlink": "#ffffff",
+    "iconunlock": "#ffffff",
+    "iconupload-cloud": "#ffffff",
+    "iconupload": "#ffffff",
+    "iconusb": "#ffffff",
+    "iconuser-check": "#ffffff",
+    "iconuser-cog": "#ffffff",
+    "iconuser-minus": "#ffffff",
+    "iconuser-plus": "#ffffff",
+    "iconuser-x": "#ffffff",
+    "iconutensils-crossed": "#ffffff",
+    "iconutensils": "#ffffff",
+    "iconvegan": "#ffffff",
+    "iconvenetian-mask": "#ffffff",
+    "iconverified": "#ffffff",
+    "iconvibrate-off": "#ffffff",
+    "iconvibrate": "#ffffff",
+    "iconvideo-off": "#ffffff",
+    "iconvideo": "#ffffff",
+    "iconview": "#ffffff",
+    "iconvoicemail": "#ffffff",
+    "iconvolume-1": "#ffffff",
+    "iconvolume-2": "#ffffff",
+    "iconvolume-x": "#ffffff",
+    "iconvolume": "#ffffff",
+    "iconwallet": "#ffffff",
+    "iconwand-2": "#ffffff",
+    "iconwand": "#ffffff",
+    "iconwatch": "#ffffff",
+    "iconwaves": "#ffffff",
+    "iconwebcam": "#ffffff",
+    "iconwebhook": "#ffffff",
+    "iconwheat-off": "#ffffff",
+    "iconwheat": "#ffffff",
+    "iconwifi-off": "#ffffff",
+    "iconwifi": "#ffffff",
+    "iconwind": "#ffffff",
+    "iconwine-off": "#ffffff",
+    "iconwine": "#ffffff",
+    "iconwrap-text": "#ffffff",
+    "iconwrench": "#ffffff",
+    "iconx-circle": "#ffffff",
+    "iconx-octagon": "#ffffff",
+    "iconx-square": "#ffffff",
+    "iconx": "#ffffff",
+    "iconyoutube": "#ffffff",
+    "iconzap-off": "#ffffff",
+    "iconzap": "#ffffff",
+    "iconzoom-in": "#ffffff",
+    "iconzoom-out": "#ffffff"
+  },
+  "spacing": {
+    "spacing-2": "2px",
+    "spacing-4": "4px",
+    "spacing-6": "6px",
+    "spacing-8": "8px",
+    "spacing-12": "12px",
+    "spacing-16": "16px",
+    "spacing-20": "20px",
+    "spacing-24": "24px",
+    "spacing-32": "32px",
+    "spacing-40": "40px",
+    "spacing-48": "48px",
+    "spacing-56": "56px",
+    "spacing-64": "64px"
+  },
+  "typography": {
+    "what-would-you-like-to-know-4": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "22.399999618530273px"
+    },
+    "history-7": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "my-settings-6": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "introduction-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "re-usable-components-built-using-radix-ui-and-tailwind-css-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "this-will-be-the-ai-frame-the-girl-will-be-replaced-with-actual-3d-ai-4": {
+      "fontSize": "20px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "just-checking-in--3": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "some-of-what-you-said-sounds-really-heavy-if-youre-in-distress-reaching-out-to-someone-can-really-help-3": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "if-you-need-immediate-support-call-or-text-988-suicide-crisis-helpline--canada-visit-https988ca-3": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "older-messages-will-be-deleted-3": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "choose-ai-personality-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "pretend-friend-3": {
+      "fontSize": "24px",
+      "fontWeight": 600,
+      "lineHeight": "32px"
+    },
+    "accounts-3": {
+      "fontSize": "24px",
+      "fontWeight": 600,
+      "lineHeight": "32px"
+    },
+    "logout-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "delete-account-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "settings--pretend-friend-3": {
+      "fontSize": "24px",
+      "fontWeight": 600,
+      "lineHeight": "32px"
+    },
+    "-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "menu-item-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "b-7": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "-8": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "menu-item-8": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "b-8": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "label-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "type-your-message-here-7": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "helper-text-6": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "continue-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "label-5": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "22.399999618530273px"
+    },
+    "description-5": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "22.399999618530273px"
+    },
+    "value-6": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "error-5": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "22.399999618530273px"
+    },
+    "button-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "signup-here-6": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "text-link-5": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "22.399999618530273px"
+    },
+    "auth---login-login-register-terms-and-conditions-page-not-now-pls-do-not-goon-or-do-3-settings-page-choosing-ai-personality-choosing-ai-avatar---1-woman-for-now-choose-a-voice-in-the-future-logout-delete-account-chatbot-page-chatting-part-2": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "14.522727012634277px"
+    },
+    "shadcn-design-system-in-figma-httpswwwfigmacomcommunityfile1203061493325953101shadcn-ui-design-system-mobile-ux-httpswwwfigmacomcommunityfile1233339730891059165-2": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "home-4": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    },
+    "search-4": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "history-4": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "profile-4": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "choosing-ai-personality-choosing-ai-avatar---1-woman-for-now-choose-a-voice-in-the-future-logout-delete-account-2": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "14.522727012634277px"
+    },
+    "dreamy-and-cozy-3": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "thought--bubbles--thought-bubble-3": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "avatar-by-rachel-3": {
+      "fontSize": "20px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "a-friend-to-build-up-social-skills-and-enjoy-with-in-a-world-where-we-are-more-separated-than-ever-3": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "inter-3": {
+      "fontSize": "48px",
+      "fontWeight": 800,
+      "lineHeight": "48px"
+    },
+    "licensed-font-logo-3": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "25px"
+    },
+    "mobile-app-font-3": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "48px"
+    },
+    "cozy-and-soft-contrasts-cools-warms-neutrals-3": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "48px"
+    },
+    "references-shadcn-design-system-in-figma-httpswwwfigmacomcommunityfile1203061493325953101shadcn-ui-design-system-mobile-ux--httpswwwfigmacomcommunityfile1233339730891059165-2": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "menu-item-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "b-5": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "shadcnui-7": {
+      "fontSize": "18px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "beautifully-designed-components-built-with-radixui-and-tailwind-css-6": {
+      "fontSize": "48px",
+      "fontWeight": 800,
+      "lineHeight": "60px"
+    },
+    "default-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "dimensions-9": {
+      "fontSize": "16px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    },
+    "set-the-dimensions-for-the-layer-9": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "width-11": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "100-13": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "label-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "continue-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "nextjs-9": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "the-react-framework---created-and-maintained-by-vercel-9": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "joined-december-2021-10": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "selected-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "unselected-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "section-title-9": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "menu-item-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "b-9": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "this-figma-file-was-made-with-love-by-skirano-5": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "add-to-library-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "accept-terms-and-condition-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "separator-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "visually-or-semantically-separates-content-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "continue-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "radix-primitives-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "an-open-source-ui-component-library-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "blog-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "docs-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "source-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "slider-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "an-input-where-the-user-selects-a-value-from-within-a-given-range-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "switch-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-control-that-allows-the-user-to-toggle-between-checked-and-not-checked-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "label-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "tabs-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-set-of-layered-sections-of-contentknown-as-tab-panelsthat-are-displayed-one-at-a-time-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "selected-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "unselected-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "make-changes-to-your-account-here-click-save-when-youre-done-6": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "email-8": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "pietroschiranogmailcom-11": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "continue-10": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "enter-your-email-address-8": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "textarea-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-a-form-textarea-or-a-component-that-looks-like-a-textarea-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "tooltip-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-popup-that-displays-information-related-to-an-element-when-receives-keyboard-focus-or-the-mouse-hovers-over-it-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "add-to-library-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "popover-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-rich-content-in-a-portal-triggered-by-a-button-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "dimensions-5": {
+      "fontSize": "16px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    },
+    "set-the-dimensions-for-the-layer-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "width-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "100-9": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "progress-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-an-indicator-showing-the-completion-progress-of-a-task-typically-displayed-as-a-progress-bar-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "radio-group-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-set-of-checkable-buttonsknown-as-radio-buttonswhere-no-more-than-one-of-the-buttons-can-be-checked-at-a-time-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "default-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "scroll-area-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "tags-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "v120-beta50-7": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "select-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-a-list-of-options-for-the-user-to-pick-fromtriggered-by-a-button-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "select-an-option-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "hover-card-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "for-sighted-users-to-preview-content-available-behind-a-link-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "nextjs-5": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "the-react-framework---created-and-maintained-by-vercel-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "joined-december-2021-6": {
+      "fontSize": "12px",
+      "fontWeight": 400,
+      "lineHeight": "16px"
+    },
+    "input-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-a-form-input-field-or-a-component-that-looks-like-an-input-field-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "email-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "email-7": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "continue-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "enter-your-email-address-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "renders-an-accessible-label-associated-with-controls-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "accept-terms-and-condition-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "menubar-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-visually-persistent-menu-common-in-desktop-applications-that-provides-quick-access-to-a-consistent-set-of-commands-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "file-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "edit-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "navigation-menu-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-collection-of-links-for-navigating-websites-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "getting-started-8": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "shadcnui-10": {
+      "fontSize": "18px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "beautifully-designed-components-built-with-radix-ui-and-tailwind-css-10": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "18px"
+    },
+    "introduction-9": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "re-usable-components-built-using-radix-ui-and-tailwind-css-9": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "checkbox-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "collapsible-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "peduarte-stared-3-repositories-6": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "login-with-email-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "email-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "pietroschiranogmailcom-8": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "enter-your-email-address-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "command-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "fast-composable-unstyled-command-menu-for-react-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "menu-item-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "b-6": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "section-title-6": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "context-menu-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-a-menu-to-the-user--such-as-a-set-of-actions-or-functions--triggered-by-a-button-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "section-title-7": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "dialog-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-modal-dialog-that-interrupts-the-user-with-important-content-and-expects-a-response-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "title-6": {
+      "fontSize": "18px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "make-changes-to-your-profile-here-click-save-when-youre-done-6": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "name-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "username-7": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "dropdown-menu-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "accordion-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-vertically-stacked-set-of-interactive-headings-that-each-reveal-an-associated-section-of-content-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "is-it-accessible-5": {
+      "fontSize": "16px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "is-it-accessible-6": {
+      "fontSize": "16px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "yes-it-adheres-to-the-wai-aria-design-pattern-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "alert-dialog-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "title-5": {
+      "fontSize": "18px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "this-action-cannot-be-undone-this-will-permanently-delete-your-account-and-remove-your-data-from-our-servers-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "cancel-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "aspect-ratio-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "displays-content-within-a-desired-ratio-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "avatar-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "an-image-element-with-a-fallback-for-representing-the-user-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "displays-a-button-or-a-component-that-looks-like-a-button-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "typography-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "styles-for-headings-paragraphs-listsetc-6": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "h1-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "taxing-laughter-the-joke-tax-chronicles-5": {
+      "fontSize": "48px",
+      "fontWeight": 800,
+      "lineHeight": "48px"
+    },
+    "h2-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "the-people-of-the-kingdom-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "h3-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "the-joke-tax-5": {
+      "fontSize": "24px",
+      "fontWeight": 600,
+      "lineHeight": "32px"
+    },
+    "h4-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "people-stopped-telling-jokes-5": {
+      "fontSize": "20px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "p-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "the-king-seeing-how-much-happier-his-subjects-were-realized-the-error-of-his-ways-and-repealed-the-joke-tax-5": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "blockquote-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "after-all-he-said-everyone-enjoys-a-good-joke-so-its-only-fair-that-they-should-pay-for-the-privilege-6": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "table-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "kings-treasury-8": {
+      "fontSize": "16px",
+      "fontWeight": 700,
+      "lineHeight": "24px"
+    },
+    "empty-8": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "modest-8": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "list-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "1st-level-of-puns-5-gold-coins-6": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "2nd-level-of-jokes-10-gold-coins-6": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "3rd-level-of-one-liners--20-gold-coins-6": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "inline-code-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "radix-uireact-alert-dialog-6": {
+      "fontSize": "14px",
+      "fontWeight": 700,
+      "lineHeight": "20px"
+    },
+    "lead-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "a-modal-dialog-that-interrupts-the-user-with-important-content-and-expects-a-response-5": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "large-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "are-you-sure-absolutely-sure-5": {
+      "fontSize": "18px",
+      "fontWeight": 600,
+      "lineHeight": "28px"
+    },
+    "small-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "email-address-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "subtle-5": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "colors-6": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "slate-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "50-8": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    },
+    "f8fafc-8": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    },
+    "destructive-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "cancel-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "subtle-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "ghost-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "link-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "login-with-email-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "loading-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "section-title-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "menu-item-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "b-4": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "section-title-4": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "people-5": {
+      "fontSize": "14px",
+      "fontWeight": 600,
+      "lineHeight": "20px"
+    },
+    "selected-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "unselected-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "is-it-accessible-4": {
+      "fontSize": "16px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "yes-it-adheres-to-the-wai-aria-design-pattern-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "file-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "edit-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "make-changes-to-your-account-here-click-save-when-youre-done-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "email-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "pietroschiranogmailcom-9": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "continue-8": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "enter-your-email-address-6": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "continue-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "getting-started-6": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "shadcnui-6": {
+      "fontSize": "18px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "beautifully-designed-components-built-with-radix-ui-and-tailwind-css-6": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "18px"
+    },
+    "shadcnui-9": {
+      "fontSize": "18px",
+      "fontWeight": 500,
+      "lineHeight": "24px"
+    },
+    "beautifully-designed-components-built-with-radix-ui-and-tailwind-css-9": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "18px"
+    },
+    "introduction-8": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "re-usable-components-built-using-radix-ui-and-tailwind-css-8": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "pietroschiranogmailcom-7": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "typing-something-8": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "width-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "20px"
+    },
+    "add-value-7": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "100-7": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "100-8": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "cn-4": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "accept-terms-and-condition-5": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "you-agree-to-our-terms-of-service-and-privacy-policy-5": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "primitives-2": {
+      "fontSize": "30px",
+      "fontWeight": 600,
+      "lineHeight": "36px"
+    },
+    "those-are-the-atomic-parts-that-make-your-components-do-not-edit-unless-you-strictly-want-to-2": {
+      "fontSize": "20px",
+      "fontWeight": 400,
+      "lineHeight": "28px"
+    },
+    "default-4": {
+      "fontSize": "14px",
+      "fontWeight": 500,
+      "lineHeight": "14px"
+    },
+    "v120-beta50-4": {
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "20px"
+    },
+    "radix-uireact-alert-dialog-3": {
+      "fontSize": "14px",
+      "fontWeight": 700,
+      "lineHeight": "20px"
+    },
+    "kings-treasury-4": {
+      "fontSize": "16px",
+      "fontWeight": 700,
+      "lineHeight": "24px"
+    },
+    "empty-4": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "modest-4": {
+      "fontSize": "16px",
+      "fontWeight": 400,
+      "lineHeight": "24px"
+    },
+    "50-5": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    },
+    "f8fafc-5": {
+      "fontSize": "12px",
+      "fontWeight": 500,
+      "lineHeight": "16px"
+    }
+  },
+  "shadows": {
+    "ai-chat-box": "0px 2px 3px rgba(0, 0, 0, 0.30000001192092896)",
+    "menu-list": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "select-options": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "colors": "0px 4px 4px rgba(0, 0, 0, 0.20000000298023224)",
+    "vector": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "login---iphone-16-1": "0px 2px 3px rgba(0, 0, 0, 0.30000001192092896)",
+    "login---iphone-16-3": "0px 2px 3px rgba(0, 0, 0, 0.30000001192092896)",
+    "login---iphone-16-4": "0px 2px 3px rgba(0, 0, 0, 0.30000001192092896)",
+    "login---iphone-16-2": "0px 2px 3px rgba(0, 0, 0, 0.30000001192092896)",
+    "popover": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "hover-card": "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    "dropdown-menu": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "tooltip": "0px 2px 4px rgba(0, 0, 0, 0.25)",
+    "menu-bar-content": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "navigation-menu-content": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "command": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "context-menu": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "typewith-picture": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)",
+    "typetwo-columns": "0px 4px 6px rgba(0, 0, 0, 0.09000000357627869)"
+  },
+  "borderRadius": {
+    "home---iphone-16": "24px",
+    "ai-chat-box": "16px",
+    "icon-button": "32px",
+    "bottom-nav": "24px",
+    "container": "100px",
+    "line": "100px",
+    "navigation-menu-content-item": "6px",
+    "mental-health": "24px",
+    "rectangle-5": "16px",
+    "history---iphone-16": "24px",
+    "settings---iphone-16": "24px",
+    "field": "6px",
+    "settings---iphone-17": "24px",
+    "select-options": "6px",
+    "menu-item": "5px",
+    "group-2": "6px",
+    "textarea": "6px",
+    "button": "6px",
+    "form-log-in": "8px",
+    "input": "5px",
+    "vector": "50px",
+    "rectangle-4": "5px",
+    "login---iphone-16-1": "24px",
+    "login---iphone-16-3": "24px",
+    "login---iphone-16-4": "24px",
+    "login---iphone-16-2": "24px",
+    "popover": "6px",
+    "rectangle-2": "50px",
+    "hover-card": "6px",
+    "tabs": "6px",
+    "tab-item": "3px",
+    "dropdown-menu": "6px",
+    "tooltip": "6px",
+    "rectangle-1": "2px",
+    "group-6": "6px",
+    "area": "40px",
+    "progress": "40px",
+    "tab-card": "6px",
+    "scroll-area": "6px",
+    "select": "6px",
+    "menubar": "6px",
+    "menubar-item": "4px",
+    "menu-bar-content": "6px",
+    "navigation-menu-item": "6px",
+    "navigation-menu-content": "5px",
+    "command": "6px",
+    "context-menu": "6px",
+    "dialog": "8px",
+    "inputsmall": "6px",
+    "alter-dialog": "6px",
+    "photo-1576075796033-848c2a5f3696-1": "6px",
+    "inline-code": "3px",
+    "slate-50": "3px",
+    "typedefault-statedefault": "6px",
+    "typeprimary-button-statehover": "6px",
+    "typedestructive-statedefault": "6px",
+    "typedestructive-statehover": "6px",
+    "typeoutline-statedefault": "6px",
+    "typeoutline-statehover": "6px",
+    "typesubtle-statedefault": "6px",
+    "typesubtle-statehover": "6px",
+    "typeghost-statedefault": "6px",
+    "typeghost-statehover": "6px",
+    "typelink-statedefault": "6px",
+    "typelink-statehover": "6px",
+    "typewith-icon-statedefault": "6px",
+    "typejust-icon-statedefault": "6px",
+    "typejust-icon-statehover": "6px",
+    "typejust-icon-circle-statedefault": "96px",
+    "typejust-icon-circle-statehover": "96px",
+    "typewith-icon-statehover": "6px",
+    "typeloading-statedefault": "6px",
+    "section-items": "5px",
+    "statehover-typedefault": "6px",
+    "menu-section-title": "5px",
+    "list": "5px",
+    "stateselected": "6px",
+    "stateunselected": "3px",
+    "accordion-item": "5px",
+    "typedefault-stateselected": "6px",
+    "typelink-stateselected": "6px",
+    "statedefault": "6px",
+    "typewith-picture": "6px",
+    "typetwo-columns": "6px",
+    "switch": "5px",
+    "frame-2": "8px",
+    "frame-6": "6px",
+    "avatar": "5px",
+    "checkbox": "5px",
+    "radio-button": "5px",
+    "collapsible": "5px",
+    "table-item": "5px"
+  }
+}

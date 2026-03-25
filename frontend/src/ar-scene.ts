@@ -22,7 +22,11 @@ export class ARScene {
 
   constructor(canvas: HTMLCanvasElement) {
     // Renderer
-    this.renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    this.renderer = new THREE.WebGLRenderer({
+      canvas,
+      alpha: true,
+      antialias: true,
+    });
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.xr.enabled = true;
@@ -30,9 +34,14 @@ export class ARScene {
     // Scene
     this.scene = new THREE.Scene();
 
-    // Camera
-    this.camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.01, 20);
-    this.camera.position.set(0, 1.6, 3);
+    // Camera — positioned to center avatar in viewport (responsive)
+    this.camera = new THREE.PerspectiveCamera(
+      70,
+      window.innerWidth / window.innerHeight,
+      0.01,
+      20,
+    );
+    this._updateCameraPosition();
 
     // Lights
     const ambient = new THREE.AmbientLight(0xffffff, 0.6);
@@ -40,10 +49,10 @@ export class ARScene {
     directional.position.set(1, 3, 2);
     this.scene.add(ambient, directional);
 
-    // Avatar group
+    // Avatar group — centered in 3D space
     this.avatar = this._buildAvatar();
     this.avatar.scale.setScalar(1.6);
-    this.avatar.position.set(0, 0, -1.5);
+    this.avatar.position.set(0, 0.2, -1.5);
     this.scene.add(this.avatar);
 
     // Handle resize
@@ -54,6 +63,20 @@ export class ARScene {
   }
 
   // ── Avatar geometry ──────────────────────────────────────────────────────
+
+  private _updateCameraPosition(): void {
+    // Responsive camera positioning to keep avatar centered
+    const aspect = window.innerWidth / window.innerHeight;
+    const isMobile = window.innerWidth < 768;
+
+    // On mobile, move camera closer and adjust height
+    if (isMobile) {
+      this.camera.position.set(0, 0.3, 2.2);
+    } else {
+      // Desktop: standard centered position
+      this.camera.position.set(0, 0.4, 3);
+    }
+  }
 
   private _buildAvatar(): THREE.Group {
     const group = new THREE.Group();
@@ -66,14 +89,20 @@ export class ARScene {
 
     // Eyes
     const eyeMat = new THREE.MeshStandardMaterial({ color: 0x1e3a5f });
-    const eyeL = new THREE.Mesh(new THREE.SphereGeometry(0.025, 16, 16), eyeMat);
+    const eyeL = new THREE.Mesh(
+      new THREE.SphereGeometry(0.025, 16, 16),
+      eyeMat,
+    );
     const eyeR = eyeL.clone();
     eyeL.position.set(-0.045, 0.41, 0.11);
     eyeR.position.set(0.045, 0.41, 0.11);
     group.add(eyeL, eyeR);
 
     // Body
-    const body = new THREE.Mesh(new THREE.CylinderGeometry(0.09, 0.12, 0.35, 32), mat);
+    const body = new THREE.Mesh(
+      new THREE.CylinderGeometry(0.09, 0.12, 0.35, 32),
+      mat,
+    );
     body.position.y = 0.1;
     group.add(body);
 
@@ -163,6 +192,7 @@ export class ARScene {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this._updateCameraPosition();
   };
 
   dispose(): void {

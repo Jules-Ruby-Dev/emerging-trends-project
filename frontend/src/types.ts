@@ -3,6 +3,7 @@
 export interface ChatMessage {
   role: "user" | "aria";
   content: string;
+  timestamp?: number;
 }
 
 export interface ChatResponse {

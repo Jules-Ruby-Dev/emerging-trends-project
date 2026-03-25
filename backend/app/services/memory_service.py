@@ -27,9 +27,11 @@ def store_memory(user_id: str, content: str, metadata: Optional[dict] = None) ->
     except RuntimeError:
         return
     collection = client.get_or_create_collection(name=_collection_name(user_id))
+    # ChromaDB requires non-empty metadata dict
+    meta = metadata or {"source": "memory"}
     collection.add(
         documents=[content],
-        metadatas=[metadata or {}],
+        metadatas=[meta],
         ids=[str(uuid.uuid4())],
     )
 
