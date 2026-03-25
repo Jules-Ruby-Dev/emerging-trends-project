@@ -179,3 +179,16 @@ export async function getPersonalities(): Promise<Personality[]> {
 
   return res.json() as Promise<Personality[]>;
 }
+
+export async function getPersonalities(): Promise<Personality[]> {
+  const res = await fetch(`${API_BASE}/personalities`, {
+    method: "GET",
+  });
+
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: "Unknown error" }));
+    throw new Error((err as { detail: string }).detail ?? "Unable to load personalities.");
+  }
+
+  return res.json() as Promise<Personality[]>;
+}
