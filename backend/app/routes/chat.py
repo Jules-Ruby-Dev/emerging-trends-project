@@ -7,6 +7,7 @@ from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from app.models.schemas import ChatRequest, ChatResponse
 from app.services.ai_service import get_ai_reply
 from app.services.auth_service import get_user_from_token
+from app.services.session_service import store_session_message
 
 router = APIRouter(prefix="/chat", tags=["chat"])
 bearer_scheme = HTTPBearer()
@@ -31,7 +32,18 @@ async def chat(
 ) -> ChatResponse:
     session_id = body.session_id or str(uuid.uuid4())
     try:
-        reply = await get_ai_reply(user_id=user_id, user_message=body.message)
+        # Store user message
+        store_session_message(user_id, session_id, "user", body.message)
+        
+        # Get AI reply with selected personality
+        reply = await get_ai_reply(
+            user_id=user_id,
+            user_message=body.message,
+            personality_id=body.personality_id
+        )
+        
+        # Store AI reply
+        store_session_message(user_id, session_id, "aria", reply)
     except RuntimeError as exc:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,

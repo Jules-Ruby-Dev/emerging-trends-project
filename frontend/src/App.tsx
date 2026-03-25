@@ -40,6 +40,8 @@ function AppContent() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [messageInput, setMessageInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedPersonality, setSelectedPersonality] =
+    useState<string>("aria-empathetic");
 
   // Get current page from route
   const getCurrentPage = () => {
@@ -134,8 +136,16 @@ function AppContent() {
     setIsLoading(true);
 
     try {
-      console.log("Calling sendMessage API...");
-      const response = await sendMessage(text, accessToken, sessionId);
+      console.log(
+        "Calling sendMessage API with personality:",
+        selectedPersonality,
+      );
+      const response = await sendMessage(
+        text,
+        accessToken,
+        sessionId,
+        selectedPersonality,
+      );
       console.log("API response:", response);
 
       const ariaMsg: ChatMessage = {
@@ -198,10 +208,19 @@ function AppContent() {
                 />
               }
             />
-            <Route path="/history" element={<HistoryPage />} />
+            <Route
+              path="/history"
+              element={<HistoryPage accessToken={accessToken} />}
+            />
             <Route
               path="/settings"
-              element={<SettingsPage onLogout={handleLogout} />}
+              element={
+                <SettingsPage
+                  onLogout={handleLogout}
+                  selectedPersonality={selectedPersonality}
+                  onPersonalityChange={setSelectedPersonality}
+                />
+              }
             />
             <Route path="/pretend-friend" element={<PretendFriendPage />} />
           </Routes>

@@ -1,6 +1,6 @@
 """AI service — wraps the Ollama chat API.
 
-The AI friend has a fixed system persona and is augmented with relevant
+The AI friend has a configurable system persona and is augmented with relevant
 long-term memories fetched from ChromaDB before each response.
 """
 
@@ -8,28 +8,26 @@ import httpx
 
 from app.config import get_settings
 from app.services.memory_service import retrieve_memories, store_memory
-
-SYSTEM_PROMPT = """You are Aria, a warm and empathetic AI friend.
-Your goal is to make the user feel heard, valued, and less alone.
-Speak naturally and conversationally — like a good friend would.
-Remember details the user shares and reference them when relevant.
-Keep responses concise (2-4 sentences) unless the user asks for more detail."""
+from app.prompts import get_system_prompt, format_memory_context
 
 
-async def get_ai_reply(user_id: str, user_message: str) -> str:
+async def get_ai_reply(
+    user_id: str,
+    user_message: str,
+    personality_id: str | None = None
+) -> str:
     """Generate an AI friend reply, enriched with long-term memory."""
     settings = get_settings()
 
+    # Get system prompt for the personality
+    system_prompt = get_system_prompt(personality_id)
+
     # Retrieve relevant past memories to ground the response
     memories = retrieve_memories(user_id, user_message)
-    memory_context = ""
-    if memories:
-        memory_context = "\n\nRelevant things you remember about this person:\n" + "\n".join(
-            f"- {m}" for m in memories
-        )
+    memory_context = format_memory_context(memories)
 
     messages = [
-        {"role": "system", "content": SYSTEM_PROMPT + memory_context},
+        {"role": "system", "content": system_prompt + memory_context},
         {"role": "user", "content": user_message},
     ]
 
