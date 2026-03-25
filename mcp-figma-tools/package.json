@@ -1,0 +1,32 @@
+{
+  "name": "ai-friend-ar-mcp-figma",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "MCP server for Figma → React component generation with design tokens",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src/index.ts",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [
+    "mcp",
+    "figma",
+    "react",
+    "design-tokens"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.0",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.2"
+  }
+}

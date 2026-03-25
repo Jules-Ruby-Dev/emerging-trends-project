@@ -2,7 +2,9 @@
 
 import type { ChatResponse } from "./types";
 
-const API_BASE = "/api";
+// In Docker: use http://backend:8000
+// In dev: use /api (with Vite proxy)
+const API_BASE = import.meta.env.VITE_API_BASE || "/api";
 
 export async function sendMessage(
   message: string,
@@ -20,7 +22,9 @@ export async function sendMessage(
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: "Unknown error" }));
-    throw new Error((err as { detail: string }).detail ?? "Chat request failed.");
+    throw new Error(
+      (err as { detail: string }).detail ?? "Chat request failed.",
+    );
   }
 
   return res.json() as Promise<ChatResponse>;
