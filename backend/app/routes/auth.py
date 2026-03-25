@@ -28,17 +28,26 @@ async def signup(body: SignUpRequest) -> AuthResponse:
 
 @router.post("/signin", response_model=AuthResponse)
 async def signin(body: SignInRequest) -> AuthResponse:
-    response = sign_in(body.email, body.password)
-    session = getattr(response, "session", None)
-    user = getattr(response, "user", None)
+    try:
+        response = sign_in(body.email, body.password)
+        session = getattr(response, "session", None)
+        user = getattr(response, "user", None)
 
-    if not session or not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password.",
+        if not session or not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password.",
+            )
+
+        return AuthResponse(
+            access_token=session.access_token,
+            user_id=str(user.id),
         )
-
-    return AuthResponse(
-        access_token=session.access_token,
-        user_id=str(user.id),
-    )
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"[AUTH ERROR] {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Authentication error: {str(e)}",
+        )

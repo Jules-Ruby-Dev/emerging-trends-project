@@ -2,30 +2,52 @@
 
 import type { ChatResponse } from "./types";
 
-// In Docker: use http://backend:8000
-// In dev: use /api (with Vite proxy)
-const API_BASE = import.meta.env.VITE_API_BASE || "/api";
+// Use localhost:8000 for the backend API
+const API_BASE = "http://localhost:8000";
 
 export async function sendMessage(
   message: string,
   accessToken: string,
   sessionId?: string,
 ): Promise<ChatResponse> {
-  const res = await fetch(`${API_BASE}/chat`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${accessToken}`,
-    },
-    body: JSON.stringify({ message, session_id: sessionId }),
+  const url = `${API_BASE}/chat`;
+  const payload = { message, session_id: sessionId };
+
+  console.log("sendMessage: POST", url, {
+    payload,
+    token: accessToken.substring(0, 10) + "...",
   });
 
-  if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: "Unknown error" }));
-    throw new Error(
-      (err as { detail: string }).detail ?? "Chat request failed.",
-    );
-  }
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${accessToken}`,
+      },
+      body: JSON.stringify(payload),
+    });
 
-  return res.json() as Promise<ChatResponse>;
+    console.log("sendMessage: response status", res.status);
+
+    if (!res.ok) {
+      let err: { detail?: string };
+      try {
+        err = await res.json();
+      } catch {
+        err = { detail: `HTTP ${res.status}: ${res.statusText}` };
+      }
+      const errMsg =
+        (err as { detail?: string }).detail ?? "Chat request failed.";
+      console.error("sendMessage: error response", errMsg);
+      throw new Error(errMsg);
+    }
+
+    const data = await res.json();
+    console.log("sendMessage: parsed response", data);
+    return data as ChatResponse;
+  } catch (error: any) {
+    console.error("sendMessage: fetch error", error);
+    throw error;
+  }
 }
