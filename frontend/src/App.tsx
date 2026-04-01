@@ -149,7 +149,7 @@ function AppContent() {
       console.log("API response:", response);
 
       const ariaMsg: ChatMessage = {
-        role: "aria",
+        role: "assistant",
         content: response.reply,
         timestamp: Date.now(),
       };
@@ -158,7 +158,7 @@ function AppContent() {
     } catch (error: any) {
       console.error("Failed to send message:", error);
       const errorMsg: ChatMessage = {
-        role: "aria",
+        role: "assistant",
         content: `Error: ${error.message || "Something went wrong"}`,
         timestamp: Date.now(),
       };

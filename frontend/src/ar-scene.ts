@@ -63,7 +63,6 @@ export class ARScene {
 
   private _updateCameraPosition(): void {
     // Responsive camera positioning to keep avatar centered
-    const aspect = window.innerWidth / window.innerHeight;
     const isMobile = window.innerWidth < 768;
 
     // On mobile, move camera closer and adjust height

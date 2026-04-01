@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/button";
 
 interface SettingsPageProps {
@@ -29,7 +28,6 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
   selectedPersonality = "aria-empathetic",
   onPersonalityChange,
 }) => {
-  const navigate = useNavigate();
   const [customInstructions, setCustomInstructions] = useState("");
 
   const handleTraitClick = (personalityId: string) => {
