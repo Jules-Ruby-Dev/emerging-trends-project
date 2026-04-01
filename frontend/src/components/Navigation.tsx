@@ -16,7 +16,7 @@ export const Navigation = ({ currentPage }) => {
   };
 
   return (
-    <nav className="absolute bottom-0 left-0 right-0 bg-darkBlue font-inter z-30 px-4 py-4">
+    <nav className="absolute bottom-0 left-0 right-0 bg-darkBlue z-30 px-4 py-4">
       {/* =========================
           NORMAL NAV ITEMS (LEFT + RIGHT)
       ========================= */}
