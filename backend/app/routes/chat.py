@@ -32,25 +32,16 @@ async def chat(
 ) -> ChatResponse:
     session_id = body.session_id or str(uuid.uuid4())
     try:
-        # Chris Part
-        # # Store user message
-        # store_session_message(user_id, session_id, "user", body.message)
-        
-        # # Get AI reply with selected personality
-        # reply = await get_ai_reply(
-        #     user_id=user_id,
-        #     user_message=body.message,
-        #     personality_id=body.personality_id
-        # )
-        
-        # # Store AI reply
-        # store_session_message(user_id, session_id, "aria", reply)
-
+        # Store user message
+        store_session_message(user_id, session_id, "user", body.message)
+        # Get AI reply and resolved personality id
         reply, resolved_personality_id = await get_ai_reply(
             user_id=user_id,
             user_message=body.message,
             personality_id=body.personality_id,
         )
+        # Store AI reply
+        store_session_message(user_id, session_id, "aria", reply)
     except RuntimeError as exc:
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
