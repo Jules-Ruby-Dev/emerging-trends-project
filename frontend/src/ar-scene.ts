@@ -22,11 +22,8 @@ export class ARScene {
 
   constructor(canvas: HTMLCanvasElement) {
     // Renderer
-    this.renderer = new THREE.WebGLRenderer({
-      canvas,
-      alpha: true,
-      antialias: true,
-    });
+    this.renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    this.renderer.setClearColor(0x000000, 0); // transparent background
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.xr.enabled = true;
@@ -143,10 +140,11 @@ export class ARScene {
     if (!supported) return false;
 
     const session = await navigator.xr.requestSession("immersive-ar", {
-      requiredFeatures: ["hit-test"],
-      optionalFeatures: ["dom-overlay"],
+      requiredFeatures: ["hit-test", "local"],
+      optionalFeatures: ["dom-overlay", "camera-access"],
     });
 
+    this.renderer.xr.setReferenceSpaceType("local");
     await this.renderer.xr.setSession(session);
     this.isInXR = true;
     return true;

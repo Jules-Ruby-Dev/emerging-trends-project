@@ -31,7 +31,8 @@ def store_memory(user_id: str, content: str, metadata: Optional[dict] = None) ->
     meta = metadata or {"source": "memory"}
     collection.add(
         documents=[content],
-        metadatas=[meta],
+        metadatas=[metadata or {"source": "chat"}],
+        # metadatas=[metadata or {}],
         ids=[str(uuid.uuid4())],
     )
 
