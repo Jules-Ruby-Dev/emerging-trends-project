@@ -101,13 +101,13 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
         </button>
 
         {/* Account Section */}
-        <div className="space-y-3 mt-8 pt-6 border-t border-gray-600">
+        <div className="space-y-3 mt-8 pt-6 pb-26 border-t border-gray-600">
           <h2 className="text-white text-sm font-medium">Accounts</h2>
 
           {/* Delete Account Button */}
           <Button
             variant="destructive"
-            className="w-full bg-red-600 hover:bg-red-700 text-white h-12 rounded-lg font-semibold"
+            className="w-full bg-red-800 hover:bg-red-700 text-white h-12 rounded-lg font-semibold"
           >
             Delete Account
           </Button>
@@ -120,19 +120,6 @@ export const SettingsPage: React.FC<SettingsPageProps> = ({
             Logout
           </Button>
         </div>
-      </div>
-
-      {/* Bottom Navigation - positioned absolutely */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent flex items-center justify-center gap-8 border-t border-cyan-500/20">
-        <button className="text-gray-400 hover:text-cyan-400 transition font-medium text-sm">
-          ⏰ History
-        </button>
-        <div className="w-8 h-8 rounded-full bg-cyan-400 flex items-center justify-center">
-          <span className="text-gray-900 font-bold">⚙</span>
-        </div>
-        <button className="text-amber-500 hover:text-amber-400 transition font-medium text-sm">
-          My settings
-        </button>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html, body, #root { width: 100%; height: 100%; }
-      body { background: #000; color: #fff; font-family: system-ui, sans-serif; overflow: hidden; }
+      body { background: #000; color: #fff; overflow: hidden; }
     </style>
   </head>
   <body>
@@ -15,121 +15,5 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
-      #app { width: 100vw; height: 100vh; position: relative; }
-
-      /* AR canvas fills the viewport */
-      #ar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
-
-      /* Overlay UI */
-      #ui-overlay {
-        position: absolute;
-        bottom: 0; left: 0; right: 0;
-        padding: 1rem;
-        background: linear-gradient(transparent, rgba(0,0,0,0.7));
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      #chat-messages {
-        max-height: 30vh;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-        padding-bottom: 0.5rem;
-      }
-
-      .msg { padding: 0.4rem 0.75rem; border-radius: 1rem; max-width: 80%; font-size: 0.9rem; }
-      .msg.user { align-self: flex-end; background: #3b82f6; }
-      .msg.assistant  { align-self: flex-start; background: #374151; }
-
-      #input-row { display: flex; gap: 0.5rem; }
-      #personality-select {
-        padding: 0.6rem 0.8rem;
-        border-radius: 0.8rem;
-        border: none;
-        background: rgba(255,255,255,0.2);
-        color: #fff;
-        font-size: 0.9rem;
-        min-width: 9rem;
-      }
-      #personality-select option {
-        color: #111;
-      }
-      #personality-description {
-        color: rgba(255,255,255,0.78);
-        font-size: 0.8rem;
-        line-height: 1.2;
-        margin-top: -0.15rem;
-      }
-      #message-input {
-        flex: 1; padding: 0.6rem 1rem; border-radius: 2rem;
-        border: none; background: rgba(255,255,255,0.15);
-        color: #fff; font-size: 1rem;
-      }
-      #message-input::placeholder { color: rgba(255,255,255,0.5); }
-      #send-btn, #ar-btn {
-        padding: 0.6rem 1.2rem; border-radius: 2rem; border: none;
-        cursor: pointer; font-size: 0.9rem; font-weight: 600;
-      }
-      #send-btn { background: #3b82f6; color: #fff; }
-      #ar-btn   { background: #10b981; color: #fff; }
-
-      /* Auth overlay */
-      #auth-overlay {
-        position: absolute; inset: 0;
-        background: rgba(0,0,0,0.85);
-        display: flex; align-items: center; justify-content: center;
-      }
-      #auth-box {
-        background: #1f2937; border-radius: 1rem; padding: 2rem;
-        min-width: 320px; display: flex; flex-direction: column; gap: 0.75rem;
-      }
-      #auth-box h2 { text-align: center; margin-bottom: 0.5rem; }
-      #auth-box input {
-        padding: 0.6rem 1rem; border-radius: 0.5rem; border: none;
-        background: rgba(255,255,255,0.1); color: #fff; font-size: 1rem;
-      }
-      #auth-box button {
-        padding: 0.6rem; border-radius: 0.5rem; border: none;
-        background: #3b82f6; color: #fff; font-size: 1rem;
-        cursor: pointer; font-weight: 600;
-      }
-      #auth-toggle { text-align: center; font-size: 0.85rem; color: #9ca3af; cursor: pointer; }
-      #auth-toggle span { color: #60a5fa; text-decoration: underline; }
-      #auth-error { color: #f87171; font-size: 0.85rem; text-align: center; min-height: 1.2em; }
-    </style>
-  </head>
-  <body>
-    <div id="app">
-      <canvas id="ar-canvas"></canvas>
-
-      <!-- Chat + controls overlay -->
-      <div id="ui-overlay">
-        <div id="chat-messages"></div>
-        <div id="input-row">
-          <select id="personality-select" aria-label="AI personality"></select>
-          <input id="message-input" type="text" placeholder="Say something to Aria…" autocomplete="off" />
-          <button id="send-btn">Send</button>
-          <button id="ar-btn">Start AR</button>
-        </div>
-        <div id="personality-description" aria-live="polite"></div>
-      </div>
-
-      <!-- Auth overlay (shown when not logged in) -->
-      <div id="auth-overlay">
-        <div id="auth-box">
-          <h2>AI Friend AR</h2>
-          <input id="auth-email"    type="email"    placeholder="Email" />
-          <input id="auth-password" type="password" placeholder="Password (8+ chars)" />
-          <button id="auth-submit">Sign In</button>
-          <div id="auth-error"></div>
-          <div id="auth-toggle"><span id="auth-toggle-text">Don't have an account? </span><span id="auth-switch">Sign Up</span></div>
-        </div>
-      </div>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

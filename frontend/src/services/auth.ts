@@ -4,7 +4,7 @@
  */
 
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
-import type { AuthResponse } from "./types";
+import type { AuthResponse } from "../types/types";
 
 const API_BASE = "/api";
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string;
@@ -22,7 +22,9 @@ function isConfiguredValue(value: string | undefined): boolean {
 }
 
 function useSupabaseAuth(): boolean {
-  return isConfiguredValue(SUPABASE_URL) && isConfiguredValue(SUPABASE_ANON_KEY);
+  return (
+    isConfiguredValue(SUPABASE_URL) && isConfiguredValue(SUPABASE_ANON_KEY)
+  );
 }
 
 function saveLocalSession(auth: AuthResponse): void {
@@ -35,7 +37,11 @@ function clearLocalSession(): void {
   localStorage.removeItem(LOCAL_USER_ID_KEY);
 }
 
-async function postAuth(path: "signin" | "signup", email: string, password: string): Promise<AuthResponse> {
+async function postAuth(
+  path: "signin" | "signup",
+  email: string,
+  password: string,
+): Promise<AuthResponse> {
   const res = await fetch(`${API_BASE}/auth/${path}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -43,8 +49,12 @@ async function postAuth(path: "signin" | "signup", email: string, password: stri
   });
 
   if (!res.ok) {
-    const err = await res.json().catch(() => ({ detail: "Authentication failed." }));
-    throw new Error((err as { detail?: string }).detail ?? "Authentication failed.");
+    const err = await res
+      .json()
+      .catch(() => ({ detail: "Authentication failed." }));
+    throw new Error(
+      (err as { detail?: string }).detail ?? "Authentication failed.",
+    );
   }
 
   return res.json() as Promise<AuthResponse>;
@@ -60,7 +70,10 @@ function getClient(): SupabaseClient {
   return _client;
 }
 
-export async function signUp(email: string, password: string): Promise<AuthResponse> {
+export async function signUp(
+  email: string,
+  password: string,
+): Promise<AuthResponse> {
   if (!useSupabaseAuth()) {
     const auth = await postAuth("signup", email, password);
     saveLocalSession(auth);
@@ -78,14 +91,20 @@ export async function signUp(email: string, password: string): Promise<AuthRespo
   };
 }
 
-export async function signIn(email: string, password: string): Promise<AuthResponse> {
+export async function signIn(
+  email: string,
+  password: string,
+): Promise<AuthResponse> {
   if (!useSupabaseAuth()) {
     const auth = await postAuth("signin", email, password);
     saveLocalSession(auth);
     return auth;
   }
 
-  const { data, error } = await getClient().auth.signInWithPassword({ email, password });
+  const { data, error } = await getClient().auth.signInWithPassword({
+    email,
+    password,
+  });
   if (error || !data.session || !data.user) {
     throw new Error(error?.message ?? "Sign-in failed.");
   }
@@ -104,7 +123,10 @@ export async function signOut(): Promise<void> {
   await getClient().auth.signOut();
 }
 
-export async function getSession(): Promise<{ access_token: string; user_id: string } | null> {
+export async function getSession(): Promise<{
+  access_token: string;
+  user_id: string;
+} | null> {
   if (!useSupabaseAuth()) {
     const access_token = localStorage.getItem(LOCAL_TOKEN_KEY);
     const user_id = localStorage.getItem(LOCAL_USER_ID_KEY);

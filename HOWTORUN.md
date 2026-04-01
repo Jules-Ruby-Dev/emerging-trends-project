@@ -69,20 +69,30 @@ If TypeScript errors appear, send me the output.
 
 ---
 
-## **Step 3: Run with Docker Compose**
+## **Step 3: Run for Development (Frontend + Backend Separate)**
 
-Once both builds succeed:
+This approach gives you **instant hot reload** when you edit frontend files.
+
+**Terminal 1 — Start Backend & ChromaDB:**
 
 ```powershell
 cd "c:\Louie\SAIT SD\ITP302-C Emerging Trends\emerging-trends-project"
-docker compose up --build
+docker compose up backend chromadb
 ```
 
-Wait for all services to be green. You should see:
+Wait for both services to be ready:
 
-- **Backend** listening on `http://localhost:8000`
+- **Backend** on `http://localhost:8000`
 - **ChromaDB** on `http://localhost:8001`
-- **Frontend** dev server on `http://localhost:5173`
+
+**Terminal 2 — Start Frontend Dev Server:**
+
+```powershell
+cd "c:\Louie\SAIT SD\ITP302-C Emerging Trends\emerging-trends-project\frontend"
+npm run dev
+```
+
+Frontend will start on `http://localhost:5173` with **hot reload enabled**. Changes to any file in `frontend/src/` will update instantly in your browser.
 
 ---
 
@@ -91,6 +101,20 @@ Wait for all services to be green. You should see:
 1. Open browser: `http://localhost:5173`
 2. You should see the AR app
 3. For login (with `DEV_MODE=true`), any token works—try a fake one
+4. Edit `frontend/src/` files and watch them update live
+
+---
+
+## **Alternative: Full Docker Compose (Production-like)**
+
+If you need everything in Docker:
+
+```powershell
+cd "c:\Louie\SAIT SD\ITP302-C Emerging Trends\emerging-trends-project"
+docker compose up --build
+```
+
+⚠️ **Note**: This serves a built bundle, so changes require a rebuild. Use the separate approach above for development.
 
 ---
 

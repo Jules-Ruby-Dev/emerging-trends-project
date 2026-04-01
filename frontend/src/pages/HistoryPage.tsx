@@ -1,6 +1,43 @@
 import React, { useEffect, useState } from "react";
-import type { HistorySession } from "../api";
-import { getHistorySessions, deleteSession } from "../api";
+import type { HistorySession } from "../services/api";
+import { getHistorySessions, deleteSession } from "../services/api";
+import logo from "../assets/images/logo-symbol-2x.png";
+
+/**
+ * ChatBubble component (inline to keep things simple)
+ */
+const ChatBubble = ({
+  role,
+  content,
+}: {
+  role: "user" | "assistant";
+  content: string;
+}) => {
+  const isUser = role === "user";
+
+  return (
+    <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
+      <div
+        className={`
+          max-w-[75%] px-4 py-3 rounded-2xl text-sm
+          ${
+            isUser
+              ? "bg-white text-black rounded-br-md"
+              : "bg-lightBlue2 text-slate-700 rounded-bl-md"
+          }
+        `}
+      >
+        {!isUser && (
+          <div className="text-xs text-darkBlue font-bold mb-1 uppercase">
+            Aria
+          </div>
+        )}
+
+        {content}
+      </div>
+    </div>
+  );
+};
 
 interface HistoryPageProps {
   accessToken?: string | null;
@@ -51,83 +88,65 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ accessToken }) => {
   };
 
   const handleSessionClick = (sessionId: string) => {
-    // Could navigate to a detail page or load the session into the chat
     console.log("Session clicked:", sessionId);
   };
 
-  const formatDate = (dateStr: string): string => {
-    try {
-      return new Date(dateStr).toLocaleDateString(undefined, {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-    } catch {
-      return "Unknown date";
-    }
-  };
-
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-black overflow-hidden flex flex-col">
-      {/* Header */}
-      <div className="h-20 bg-gradient-to-b from-cyan-900/40 to-transparent flex items-center px-6 border-b border-gray-700">
-        <h1 className="text-2xl font-bold text-white">Chat History</h1>
+    <div className="relative w-full h-full flex flex-col bg-gradient-to-b from-[#052A3A] to-[#02151F]">
+      {/* HEADER */}
+      <div className="p-6 text-white text-lg font-semibold">
+        <img src={logo} alt="Friendo Logo" className="w-24 h-auto" />
       </div>
 
-      {/* Content */}
-      <div className="flex-1 overflow-y-auto p-6 pb-24 space-y-4">
+      {/* CHAT STYLE HISTORY */}
+      <div className="flex-1 overflow-y-auto px-4 pb-28 space-y-6">
+        {/* Notice */}
+        <div className="text-center text-gray-400 text-sm">
+          Older messages will be deleted
+        </div>
+
+        {/* STATES */}
         {isLoading ? (
-          <div className="flex flex-col items-center justify-center h-full">
-            <div className="text-4xl mb-4">⏳</div>
-            <p className="text-gray-400">Loading history...</p>
-          </div>
+          <div className="text-center text-gray-400">Loading history...</div>
         ) : error ? (
-          <div className="flex flex-col items-center justify-center h-full">
-            <div className="text-4xl mb-4">⚠️</div>
-            <p className="text-red-400">{error}</p>
-          </div>
+          <div className="text-center text-red-400">{error}</div>
         ) : history.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full text-center">
-            <div className="text-6xl mb-4">⏱️</div>
-            <h2 className="text-xl font-semibold text-white mb-2">
-              No History Yet
-            </h2>
-            <p className="text-gray-400 mb-8">
-              Your chat conversations will appear here
-            </p>
-            <p className="text-sm text-gray-500">
-              Note: Conversations are kept for 30 days
-            </p>
-          </div>
+          <div className="text-center text-gray-400">No conversations yet</div>
         ) : (
           history.map((session) => (
             <div
               key={session.session_id}
+              className="space-y-2 group relative"
               onClick={() => handleSessionClick(session.session_id)}
-              className="p-4 bg-gray-800/40 hover:bg-gray-800/60 rounded-lg border border-gray-700 cursor-pointer transition-colors group"
             >
-              <div className="flex justify-between items-start">
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-white font-medium mb-1 truncate">
-                    {session.title || "Untitled Chat"}
-                  </h3>
-                  <p className="text-sm text-gray-400 line-clamp-2">
-                    {session.preview}
-                  </p>
-                  <p className="text-xs text-gray-500 mt-2">
-                    {session.message_count} messages
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 ml-4 flex-shrink-0">
-                  <div className="text-xs text-gray-500 whitespace-nowrap">
-                    {formatDate(session.updated_at)}
-                  </div>
+              {/* FAKE USER MESSAGE (for UI realism) */}
+              <ChatBubble
+                role="user"
+                content={session.title || "Untitled chat"}
+              />
+
+              {/* AI MESSAGE (real preview) */}
+              <ChatBubble
+                role="assistant"
+                content={
+                  session.preview ||
+                  "No preview available. Start chatting to see your conversations here."
+                }
+              />
+
+              {/* Meta row */}
+              <div className="flex justify-between items-center text-xs text-gray-500 px-2">
+                <span>{session.message_count} messages</span>
+
+                <div className="flex items-center gap-2">
+                  <span>
+                    {new Date(session.updated_at).toLocaleDateString()}
+                  </span>
+
+                  {/* DELETE */}
                   <button
                     onClick={(e) => handleDelete(e, session.session_id)}
-                    className="opacity-0 group-hover:opacity-100 transition-opacity p-1 hover:bg-red-500/20 rounded text-red-400 hover:text-red-300"
-                    title="Delete session"
+                    className="opacity-0 group-hover:opacity-100 transition-opacity text-red-400 hover:text-red-300"
                   >
                     🗑️
                   </button>
@@ -136,13 +155,6 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({ accessToken }) => {
             </div>
           ))
         )}
-      </div>
-
-      {/* Footer Info */}
-      <div className="border-t border-gray-700 p-4 bg-gradient-to-t from-black/60 to-transparent text-center">
-        <p className="text-xs text-gray-500">
-          Conversations are stored securely and kept for 30 days
-        </p>
       </div>
     </div>
   );

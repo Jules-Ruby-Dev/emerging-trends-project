@@ -8,9 +8,9 @@
  */
 
 import { ARScene } from "./ar-scene";
-import { getPersonalities, sendMessage } from "./api";
-import { signIn, signUp, signOut, getSession } from "./auth";
-import type { ChatMessage, Personality } from "./types";
+import { getPersonalities, sendMessage } from "./services/api";
+import { signIn, signUp, signOut, getSession } from "./services/auth";
+import type { ChatMessage, Personality } from "./types/types";
 
 // ── DOM refs ─────────────────────────────────────────────────────────────────
 
@@ -20,14 +20,24 @@ const authSubmit = document.getElementById("auth-submit") as HTMLButtonElement;
 const authSwitch = document.getElementById("auth-switch") as HTMLSpanElement;
 const authError = document.getElementById("auth-error") as HTMLDivElement;
 const authEmail = document.getElementById("auth-email") as HTMLInputElement;
-const authPassword = document.getElementById("auth-password") as HTMLInputElement;
-const messageInput = document.getElementById("message-input") as HTMLInputElement;
+const authPassword = document.getElementById(
+  "auth-password",
+) as HTMLInputElement;
+const messageInput = document.getElementById(
+  "message-input",
+) as HTMLInputElement;
 const sendBtn = document.getElementById("send-btn") as HTMLButtonElement;
 const arBtn = document.getElementById("ar-btn") as HTMLButtonElement;
-const authToggleText = document.getElementById("auth-toggle-text") as HTMLSpanElement;
+const authToggleText = document.getElementById(
+  "auth-toggle-text",
+) as HTMLSpanElement;
 const chatMessages = document.getElementById("chat-messages") as HTMLDivElement;
-const personalitySelect = document.getElementById("personality-select") as HTMLSelectElement;
-const personalityDescription = document.getElementById("personality-description") as HTMLDivElement;
+const personalitySelect = document.getElementById(
+  "personality-select",
+) as HTMLSelectElement;
+const personalityDescription = document.getElementById(
+  "personality-description",
+) as HTMLDivElement;
 
 // ── App state ─────────────────────────────────────────────────────────────────
 
@@ -69,9 +79,12 @@ function getToneLabel(personality: Personality): string {
   if (personality.id === "reflective") return "Thoughtful";
 
   const description = personality.description.toLowerCase();
-  if (description.includes("empathetic") || description.includes("warm")) return "Empathetic";
-  if (description.includes("action") || description.includes("motivational")) return "Action-focused";
-  if (description.includes("reflect") || description.includes("thoughtful")) return "Thoughtful";
+  if (description.includes("empathetic") || description.includes("warm"))
+    return "Empathetic";
+  if (description.includes("action") || description.includes("motivational"))
+    return "Action-focused";
+  if (description.includes("reflect") || description.includes("thoughtful"))
+    return "Thoughtful";
   return "Custom";
 }
 
@@ -88,7 +101,9 @@ function renderPersonalityOptions(items: Personality[]): void {
 
   personalitySelect.innerHTML = "";
   for (const tone of toneOrder) {
-    const groupItems = (grouped.get(tone) ?? []).sort((a, b) => a.name.localeCompare(b.name));
+    const groupItems = (grouped.get(tone) ?? []).sort((a, b) =>
+      a.name.localeCompare(b.name),
+    );
     if (!groupItems.length) continue;
 
     const group = document.createElement("optgroup");
@@ -108,7 +123,8 @@ function renderPersonalityOptions(items: Personality[]): void {
 
 function updatePersonalityDescription(personalityId: string): void {
   const found = personalities.find((p) => p.id === personalityId);
-  personalityDescription.textContent = found?.description ?? "Warm and empathetic AI friend.";
+  personalityDescription.textContent =
+    found?.description ?? "Warm and empathetic AI friend.";
 }
 
 async function loadPersonalities(): Promise<void> {
@@ -116,7 +132,11 @@ async function loadPersonalities(): Promise<void> {
     personalities = await getPersonalities();
   } catch {
     personalities = [
-      { id: "aria", name: "Aria", description: "Warm and empathetic AI friend." },
+      {
+        id: "aria",
+        name: "Aria",
+        description: "Warm and empathetic AI friend.",
+      },
     ];
   }
 
@@ -124,7 +144,9 @@ async function loadPersonalities(): Promise<void> {
 
   const hasSelected = personalities.some((p) => p.id === selectedPersonalityId);
   const ariaDefault = personalities.find((p) => p.id === "aria")?.id;
-  selectedPersonalityId = hasSelected ? selectedPersonalityId : (ariaDefault ?? personalities[0]?.id ?? "aria");
+  selectedPersonalityId = hasSelected
+    ? selectedPersonalityId
+    : (ariaDefault ?? personalities[0]?.id ?? "aria");
   personalitySelect.value = selectedPersonalityId;
   updatePersonalityDescription(selectedPersonalityId);
 }
@@ -186,7 +208,12 @@ async function handleSend(): Promise<void> {
   sendBtn.disabled = true;
 
   try {
-    const response = await sendMessage(text, accessToken, sessionId, selectedPersonalityId);
+    const response = await sendMessage(
+      text,
+      accessToken,
+      sessionId,
+      selectedPersonalityId,
+    );
     sessionId = response.session_id;
     appendMessage({ role: "assistant", content: response.reply });
     selectedPersonalityId = response.personality_id;

@@ -7,9 +7,9 @@ import {
   useLocation,
 } from "react-router-dom";
 import { ARScene } from "./ar-scene";
-import { sendMessage } from "./api";
-import { signIn, signUp, signOut, getSession } from "./auth";
-import type { ChatMessage } from "./types";
+import { sendMessage } from "./services/api";
+import { signIn, signUp, signOut, getSession } from "./services/auth";
+import type { ChatMessage } from "./types/types";
 import { Navigation } from "./components/Navigation";
 import { HomePage } from "./pages/HomePage";
 import { HistoryPage } from "./pages/HistoryPage";

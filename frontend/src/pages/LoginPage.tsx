@@ -1,6 +1,8 @@
 import React from "react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
+import logoComplete from "../assets/images/logo-avatar-wordmark-2x.png";
+import backgroundImage from "../assets/images/bg-1.jpg";
 
 interface LoginPageProps {
   isSignUp: boolean;
@@ -24,20 +26,25 @@ export const LoginPage: React.FC<LoginPageProps> = ({
   onToggleMode,
 }) => {
   return (
-    <div className="w-full h-full bg-gradient-to-br from-slate-900 via-slate-800 to-black overflow-hidden flex flex-col items-center justify-center p-6">
+    <div
+      className="bg-cover bg-center w-full h-full from-slate-900 via-slate-800 to-black overflow-hidden flex flex-col items-center justify-center p-6"
+      style={{
+        backgroundImage: `url('${backgroundImage}')`,
+      }}
+    >
       {/* Logo/Branding */}
-      <div className="mb-12 text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center shadow-lg shadow-cyan-500/50">
-            <span className="text-2xl">👧</span>
-          </div>
+      <div className="mb-2 text-center">
+        <div className="flex items-center justify-center gap-3">
+          <img
+            src={logoComplete}
+            alt="Friendo Pretendo Logo"
+            className="w-64 h-auto"
+          />
         </div>
-        <h1 className="text-4xl font-bold text-white mb-2">Friendo</h1>
-        <p className="text-cyan-400 text-lg font-semibold">PRETENDO</p>
       </div>
 
       {/* Form Card */}
-      <div className="w-full max-w-sm">
+      <div className="w-3/4 max-w-sm">
         <form onSubmit={onSubmit} className="space-y-6">
           {/* Email Input */}
           <div>

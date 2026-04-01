@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { InfoPopup } from "../components/InfoPopup";
-import type { ChatMessage } from "../types";
+import type { ChatMessage } from "../types/types";
+import logo from "../assets/images/logo-symbol-2x.png";
+import iconInfo from "../assets/icons/icon-info.svg";
+import iconUp from "../assets/icons/icon-arrow-up.svg";
+import iconMic from "../assets/icons/icon-mic.svg";
+import iconCamera from "../assets/icons/icon-camera.svg";
 
 interface HomePageProps {
   messages: ChatMessage[];
@@ -73,22 +78,20 @@ export const HomePage: React.FC<HomePageProps> = ({
       {/* 3D Canvas Background with AR Avatar - Canvas is rendered by App.tsx */}
 
       {/* Header */}
-      <div className="flex-shrink-0 flex justify-between items-center px-4 py-3 bg-gradient-to-b from-black/80 to-transparent border-b border-cyan-500/20 relative z-20">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-sm font-bold text-white">
-            F
-          </div>
-          <div>
-            <div className="text-xs font-bold text-cyan-400">Friendo</div>
-            <div className="text-xs text-cyan-300">PRETENDO</div>
-          </div>
+      <div className="flex-shrink-0 flex justify-between items-center px-6 py-3 bg-gradient-to-b from-black/80 to-transparent relative z-20">
+        <div className="">
+          <img src={logo} alt="Friendo Logo" className="w-24 h-auto" />
         </div>
         <button
           onClick={() => setIsInfoPopupOpen(true)}
           className="text-gray-400 hover:text-cyan-400 transition text-lg p-1"
           title="Info"
         >
-          ⓘ
+          <img
+            src={iconInfo}
+            alt="Info"
+            className="w-8 h-8 me-3 opacity-50 hover:opacity:100 transition-opacity"
+          />
         </button>
       </div>
 
@@ -123,10 +126,10 @@ export const HomePage: React.FC<HomePageProps> = ({
             {isLoading && (
               <div className="flex justify-start">
                 <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-xs mr-2 flex-shrink-0">
-                  F
+                  PF
                 </div>
                 <div className="bg-amber-100/90 text-gray-900 px-4 py-2 rounded-lg rounded-bl-none text-sm">
-                  ✍️ Thinking...
+                  Aria is thinking...
                 </div>
               </div>
             )}
@@ -134,55 +137,49 @@ export const HomePage: React.FC<HomePageProps> = ({
         </div>
 
         {/* Input Area - Sticky at bottom */}
-        <div className="flex-shrink-0 w-full bg-gradient-to-t from-black via-black/95 to-transparent px-4 pt-4 pb-32 space-y-3 relative z-20">
-          {/* Action Buttons */}
-          <div className="flex justify-center gap-8 text-gray-400">
-            <button
-              className="hover:text-cyan-400 transition text-xl"
-              title="Upload image"
-            >
-              📷
-            </button>
-            <button
-              className="hover:text-cyan-400 transition text-xl"
-              title="Code snippet"
-            >
-              {"<>"}
-            </button>
-            <button
-              className="hover:text-cyan-400 transition text-xl"
-              title="Voice message"
-            >
-              🎤
-            </button>
-          </div>
-
+        <div className="flex-shrink-0 w-full bg-gradient-to-t from-black via-black/95 to-transparent px-4 pt-4 pb-40 space-y-3 relative z-20">
           {/* Input Box */}
-          <div className="flex gap-3 items-end">
-            <Input
-              type="text"
-              placeholder="What would you like to know?"
-              value={messageInput}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                onInputChange(e.target.value)
-              }
-              onKeyPress={(e: React.KeyboardEvent<HTMLInputElement>) => {
-                if (e.key === "Enter" && !e.shiftKey) {
-                  e.preventDefault();
-                  handleSend();
-                }
-              }}
-              disabled={isLoading}
-              className="flex-1 bg-white/90 border-none text-gray-900 placeholder-gray-500 rounded-lg h-10"
-            />
-            <Button
-              onClick={handleSend}
-              disabled={isLoading || !messageInput.trim()}
-              className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white px-4 h-10 rounded-lg flex-shrink-0"
-              size="sm"
-            >
-              {isLoading ? "..." : "↑"}
-            </Button>
+          <div className="w-full max-w-2xl mx-auto">
+            <div className="w-full max-w-2xl mx-auto relative">
+              {/* FLOATING ACTION ICONS (BOTTOM LEFT)*/}
+              <div className="absolute left-4 bottom-[12px] flex gap-2 text-gray-700 z-10">
+                <button className="opacity-50 *:hover:opacity-100 text-xl">
+                  <img src={iconCamera} alt="Camera" className="w-8 h-8" />
+                </button>
+                {/* <button className="hover:opacity-70 text-xl">{"</>"}</button> */}
+                <button className="opacity-50 *:hover:opacity-100 text-xl">
+                  <img src={iconMic} alt="Microphone" className="w-8 h-8" />
+                </button>
+              </div>
+
+              {/* INPUT CONTAINER */}
+              <div className="flex items-center bg-lightYellow rounded-2xl px-5 pt-4 pb-12 shadow-md">
+                {/* INPUT */}
+                <input
+                  type="text"
+                  placeholder="What would you like to know?"
+                  value={messageInput}
+                  onChange={(e) => onInputChange(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      handleSend();
+                    }
+                  }}
+                  disabled={isLoading}
+                  className="flex-1 bg-transparent outline-none text-gray-700 placeholder-gray-500 text-lg"
+                />
+
+                {/* SEND BUTTON */}
+                <button
+                  onClick={handleSend}
+                  disabled={isLoading || !messageInput.trim()}
+                  className="ml-3 bg-cyan-500 hover:bg-cyan-600 text-white w-12 h-12 flex items-center justify-center rounded-full transition"
+                >
+                  {isLoading ? "..." : "↑"}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
