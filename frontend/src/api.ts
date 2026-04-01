@@ -1,6 +1,6 @@
 /** REST API helpers for communicating with the FastAPI backend. */
 
-import type { ChatResponse } from "./types";
+import type { ChatResponse, Personality } from "./types";
 
 // Use localhost:8000 for the backend API
 const API_BASE = "http://localhost:8000";
@@ -33,18 +33,11 @@ export async function sendMessage(
   personalityId?: string,
 ): Promise<ChatResponse> {
   const url = `${API_BASE}/chat`;
-  const payload: any = { message, session_id: sessionId };
-
-  // Add personality if provided
-  if (personalityId) {
-    payload.personality_id = personalityId;
-  }
-
+  const payload: any = { message, session_id: sessionId, personality_id: personalityId };
   console.log("sendMessage: POST", url, {
     payload,
     token: accessToken.substring(0, 10) + "...",
   });
-
   try {
     const res = await fetch(url, {
       method: "POST",
@@ -54,9 +47,7 @@ export async function sendMessage(
       },
       body: JSON.stringify(payload),
     });
-
     console.log("sendMessage: response status", res.status);
-
     if (!res.ok) {
       let err: { detail?: string };
       try {
@@ -64,12 +55,10 @@ export async function sendMessage(
       } catch {
         err = { detail: `HTTP ${res.status}: ${res.statusText}` };
       }
-      const errMsg =
-        (err as { detail?: string }).detail ?? "Chat request failed.";
+      const errMsg = (err as { detail?: string }).detail ?? "Chat request failed.";
       console.error("sendMessage: error response", errMsg);
       throw new Error(errMsg);
     }
-
     const data = await res.json();
     console.log("sendMessage: parsed response", data);
     return data as ChatResponse;
@@ -152,4 +141,15 @@ export async function deleteSession(
     console.error("deleteSession: error", error);
     throw error;
   }
+}
+
+export async function getPersonalities(): Promise<Personality[]> {
+  const res = await fetch(`${API_BASE}/personalities`, {
+    method: "GET",
+  });
+  if (!res.ok) {
+    const err = await res.json().catch(() => ({ detail: "Unknown error" }));
+    throw new Error((err as { detail: string }).detail ?? "Unable to load personalities.");
+  }
+  return res.json() as Promise<Personality[]>;
 }

@@ -34,14 +34,12 @@ async def chat(
     try:
         # Store user message
         store_session_message(user_id, session_id, "user", body.message)
-        
-        # Get AI reply with selected personality
-        reply = await get_ai_reply(
+        # Get AI reply and resolved personality id
+        reply, resolved_personality_id = await get_ai_reply(
             user_id=user_id,
             user_message=body.message,
-            personality_id=body.personality_id
+            personality_id=body.personality_id,
         )
-        
         # Store AI reply
         store_session_message(user_id, session_id, "aria", reply)
     except RuntimeError as exc:
@@ -50,4 +48,8 @@ async def chat(
             detail=str(exc),
         ) from exc
 
-    return ChatResponse(reply=reply, session_id=session_id)
+    return ChatResponse(
+        reply=reply,
+        session_id=session_id,
+        personality_id=resolved_personality_id,
+    )

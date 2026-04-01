@@ -6,7 +6,6 @@ from pydantic import BaseModel
 from app.prompts import (
     get_personality,
     get_all_personalities,
-    CRISIS_RESOURCES,
     get_crisis_resources,
 )
 

@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.config import get_settings
-from app.routes import health, auth, chat, personality, history
+from app.routes import health, auth, chat, personality, history, personalities
 
 settings = get_settings()
 
@@ -29,3 +29,5 @@ app.include_router(auth.router)
 app.include_router(chat.router)
 app.include_router(personality.router)
 app.include_router(history.router)
+app.include_router(personalities.router)
+# 0[]'p-'

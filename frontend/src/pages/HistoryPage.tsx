@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import type { HistorySession } from "../api";
 import { getHistorySessions, deleteSession } from "../api";
 
@@ -8,7 +7,6 @@ interface HistoryPageProps {
 }
 
 export const HistoryPage: React.FC<HistoryPageProps> = ({ accessToken }) => {
-  const navigate = useNavigate();
   const [history, setHistory] = useState<HistorySession[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

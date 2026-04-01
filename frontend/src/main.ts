@@ -8,9 +8,9 @@
  */
 
 import { ARScene } from "./ar-scene";
-import { sendMessage } from "./api";
+import { getPersonalities, sendMessage } from "./api";
 import { signIn, signUp, signOut, getSession } from "./auth";
-import type { ChatMessage } from "./types";
+import type { ChatMessage, Personality } from "./types";
 
 // ── DOM refs ─────────────────────────────────────────────────────────────────
 
@@ -26,6 +26,8 @@ const sendBtn = document.getElementById("send-btn") as HTMLButtonElement;
 const arBtn = document.getElementById("ar-btn") as HTMLButtonElement;
 const authToggleText = document.getElementById("auth-toggle-text") as HTMLSpanElement;
 const chatMessages = document.getElementById("chat-messages") as HTMLDivElement;
+const personalitySelect = document.getElementById("personality-select") as HTMLSelectElement;
+const personalityDescription = document.getElementById("personality-description") as HTMLDivElement;
 
 // ── App state ─────────────────────────────────────────────────────────────────
 
@@ -34,6 +36,8 @@ let sessionId: string | undefined;
 let isSignUpMode = false;
 const messages: ChatMessage[] = [];
 let scene: ARScene;
+let personalities: Personality[] = [];
+let selectedPersonalityId = "aria";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -53,6 +57,82 @@ function setError(text: string): void {
 function hideAuthOverlay(): void {
   authOverlay.style.display = "none";
 }
+
+function getPersonalityName(personalityId: string): string {
+  const found = personalities.find((p) => p.id === personalityId);
+  return found?.name ?? "Aria";
+}
+
+function getToneLabel(personality: Personality): string {
+  if (personality.id === "aria") return "Empathetic";
+  if (personality.id === "coach") return "Action-focused";
+  if (personality.id === "reflective") return "Thoughtful";
+
+  const description = personality.description.toLowerCase();
+  if (description.includes("empathetic") || description.includes("warm")) return "Empathetic";
+  if (description.includes("action") || description.includes("motivational")) return "Action-focused";
+  if (description.includes("reflect") || description.includes("thoughtful")) return "Thoughtful";
+  return "Custom";
+}
+
+function renderPersonalityOptions(items: Personality[]): void {
+  const toneOrder = ["Empathetic", "Action-focused", "Thoughtful", "Custom"];
+  const grouped = new Map<string, Personality[]>();
+
+  for (const item of items) {
+    const tone = getToneLabel(item);
+    const existing = grouped.get(tone) ?? [];
+    existing.push(item);
+    grouped.set(tone, existing);
+  }
+
+  personalitySelect.innerHTML = "";
+  for (const tone of toneOrder) {
+    const groupItems = (grouped.get(tone) ?? []).sort((a, b) => a.name.localeCompare(b.name));
+    if (!groupItems.length) continue;
+
+    const group = document.createElement("optgroup");
+    group.label = tone;
+
+    for (const item of groupItems) {
+      const option = document.createElement("option");
+      option.value = item.id;
+      option.textContent = item.name;
+      option.title = item.description;
+      group.appendChild(option);
+    }
+
+    personalitySelect.appendChild(group);
+  }
+}
+
+function updatePersonalityDescription(personalityId: string): void {
+  const found = personalities.find((p) => p.id === personalityId);
+  personalityDescription.textContent = found?.description ?? "Warm and empathetic AI friend.";
+}
+
+async function loadPersonalities(): Promise<void> {
+  try {
+    personalities = await getPersonalities();
+  } catch {
+    personalities = [
+      { id: "aria", name: "Aria", description: "Warm and empathetic AI friend." },
+    ];
+  }
+
+  renderPersonalityOptions(personalities);
+
+  const hasSelected = personalities.some((p) => p.id === selectedPersonalityId);
+  const ariaDefault = personalities.find((p) => p.id === "aria")?.id;
+  selectedPersonalityId = hasSelected ? selectedPersonalityId : (ariaDefault ?? personalities[0]?.id ?? "aria");
+  personalitySelect.value = selectedPersonalityId;
+  updatePersonalityDescription(selectedPersonalityId);
+}
+
+personalitySelect.addEventListener("change", () => {
+  selectedPersonalityId = personalitySelect.value;
+  updatePersonalityDescription(selectedPersonalityId);
+});
 
 // ── Auth flow ─────────────────────────────────────────────────────────────────
 
@@ -84,7 +164,10 @@ authSubmit.addEventListener("click", async () => {
 
     accessToken = response.access_token;
     hideAuthOverlay();
-    appendMessage({ role: "aria", content: "Hi! I'm Aria, your AI friend. How are you doing?" });
+    appendMessage({
+      role: "assistant",
+      content: `Hi! I'm ${getPersonalityName(selectedPersonalityId)}. How are you doing?`,
+    });
   } catch (err) {
     setError(err instanceof Error ? err.message : "Authentication failed.");
   } finally {
@@ -103,13 +186,16 @@ async function handleSend(): Promise<void> {
   sendBtn.disabled = true;
 
   try {
-    const response = await sendMessage(text, accessToken, sessionId);
+    const response = await sendMessage(text, accessToken, sessionId, selectedPersonalityId);
     sessionId = response.session_id;
-    appendMessage({ role: "aria", content: response.reply });
+    appendMessage({ role: "assistant", content: response.reply });
+    selectedPersonalityId = response.personality_id;
+    personalitySelect.value = selectedPersonalityId;
+    updatePersonalityDescription(selectedPersonalityId);
     scene.triggerTalkAnimation();
   } catch (err) {
     appendMessage({
-      role: "aria",
+      role: "assistant",
       content: "Sorry, I couldn't connect right now. Please try again.",
     });
   } finally {
@@ -159,13 +245,17 @@ document.addEventListener("keydown", async (e) => {
 
 async function init(): Promise<void> {
   scene = new ARScene(canvas);
+  await loadPersonalities();
 
   // Check for an existing Supabase session
   const existing = await getSession();
   if (existing) {
     accessToken = existing.access_token;
     hideAuthOverlay();
-    appendMessage({ role: "aria", content: "Welcome back! Great to see you again." });
+    appendMessage({
+      role: "assistant",
+      content: `Welcome back! ${getPersonalityName(selectedPersonalityId)} is ready to chat.`,
+    });
   }
 }
 
