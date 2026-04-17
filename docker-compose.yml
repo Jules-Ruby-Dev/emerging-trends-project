@@ -12,6 +12,11 @@ services:
       - chroma_data:/app/chroma_data
     depends_on:
       - chromadb
+    # Ensures host.docker.internal resolves to the Docker host on Linux too.
+    # On Docker Desktop for Windows/Mac this is automatic; this makes it explicit
+    # so the backend can always reach Ollama running on the host machine.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   # ── ChromaDB (optional remote mode) ───────────────────────────────────────
   chromadb:

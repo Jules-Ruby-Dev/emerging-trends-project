@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     # Ollama
     ollama_base_url: str = ""
-    ollama_model: str = "llama3.2"
+    ollama_model: str = "gemma4:e4b"
 
     # Supabase
     supabase_url: str = ""

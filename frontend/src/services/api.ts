@@ -2,8 +2,11 @@
 
 import type { ChatResponse, Personality } from "../types/types";
 
-// Use localhost:8000 for the backend API
-const API_BASE = "http://localhost:8000";
+// Relative base so every device (PC browser, phone, tablet) resolves the URL
+// against wherever the Vite dev server is running.
+// Vite's proxy (vite.config.ts) forwards /api/* → http://localhost:8000/*
+// stripping the /api prefix, so /api/chat → backend /chat, etc.
+const API_BASE = "/api";
 
 export interface HistorySession {
   session_id: string;
