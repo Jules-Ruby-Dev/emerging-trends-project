@@ -18,8 +18,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins_list,
-    allow_credentials=True,
+    # In dev mode, allow all origins so mobile devices on the local network
+    # can reach the backend without needing to hardcode a specific LAN IP.
+    # In production, lock this down to the exact frontend origin.
+    allow_origins=["*"] if settings.dev_mode else settings.cors_origins_list,
+    allow_credentials=False,  # credentials=True is incompatible with allow_origins=["*"]
     allow_methods=["*"],
     allow_headers=["*"],
 )
